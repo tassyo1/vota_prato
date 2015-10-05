@@ -13,6 +13,7 @@ validate :primeira_letra_deve_ser_maiuscula
 		errors.add(:nome," a primeira letra deve ser maiúscula") unless nome =~  /[A-Z].*/
 		
 	end
-
+	has_many :qualificacoes
+	has_and_belongs_to_many :pratos
 end
 	
