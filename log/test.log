@@ -1,0 +1,32 @@
+  [1m[36m (137.5ms)[0m  [1mDROP DATABASE IF EXISTS `vota_prato_test`[0m
+  [1m[35m (6.2ms)[0m  CREATE DATABASE `vota_prato_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (75.2ms)[0m  [1mCREATE TABLE `clientes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `idade` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (97.3ms)[0m  CREATE TABLE `pratos` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (75.2ms)[0m  [1mCREATE TABLE `pratos_restaurantes` (`prato_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (56.7ms)[0m  CREATE TABLE `qualificacoes` (`id` int(11) auto_increment PRIMARY KEY, `nota` float(24), `valor_gasto` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `cliente_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB
+  [1m[36m (54.9ms)[0m  [1mCREATE  INDEX `fk_rails_5b62f7ef27` USING btree ON `qualificacoes` (`cliente_id`) [0m
+  [1m[35m (41.7ms)[0m  CREATE  INDEX `fk_rails_081869fcbc` USING btree ON `qualificacoes` (`restaurante_id`) 
+  [1m[36m (116.0ms)[0m  [1mCREATE TABLE `receitas` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `prato_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (111.7ms)[0m  CREATE TABLE `restaurantes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `especialidade` varchar(40)) ENGINE=InnoDB
+  [1m[36m (1553.0ms)[0m  [1mALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_5b62f7ef27`
+FOREIGN KEY (`cliente_id`)
+  REFERENCES `clientes` (`id`)
+[0m
+  [1m[35m (196.4ms)[0m  ALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_081869fcbc`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+
+  [1m[36m (107.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (98.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151006190727')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151002040129')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151002040923')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003214708')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003220255')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003221037')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003223301')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151004211136')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004212020')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151004212430')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m

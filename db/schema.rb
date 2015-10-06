@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004212430) do
+ActiveRecord::Schema.define(version: 20151006212402) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome",       limit: 80
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20151004212430) do
     t.integer "restaurante_id", limit: 4
   end
 
+  add_index "pratos_restaurantes", ["prato_id"], name: "fk_rails_295555769c", using: :btree
+  add_index "pratos_restaurantes", ["restaurante_id"], name: "fk_rails_7987cd3df4", using: :btree
+
   create_table "qualificacoes", force: :cascade do |t|
     t.float    "nota",           limit: 24
     t.float    "valor_gasto",    limit: 24
@@ -39,6 +42,9 @@ ActiveRecord::Schema.define(version: 20151004212430) do
     t.integer  "cliente_id",     limit: 4
     t.integer  "restaurante_id", limit: 4
   end
+
+  add_index "qualificacoes", ["cliente_id"], name: "fk_rails_5b62f7ef27", using: :btree
+  add_index "qualificacoes", ["restaurante_id"], name: "fk_rails_081869fcbc", using: :btree
 
   create_table "receitas", force: :cascade do |t|
     t.text     "conteudo",   limit: 65535
@@ -55,4 +61,8 @@ ActiveRecord::Schema.define(version: 20151004212430) do
     t.string   "especialidade", limit: 40
   end
 
+  add_foreign_key "pratos_restaurantes", "pratos"
+  add_foreign_key "pratos_restaurantes", "restaurantes"
+  add_foreign_key "qualificacoes", "clientes"
+  add_foreign_key "qualificacoes", "restaurantes"
 end

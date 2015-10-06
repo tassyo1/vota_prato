@@ -468,3 +468,342 @@ WHERE fk.referenced_column_name is not null
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.5ms)[0m  INSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (5.5, 67.9, 67, 77, '2015-10-05 01:18:37', '2015-10-05 01:18:37')
   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-10-05 00:31:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (36.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 54ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (29.5ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 90 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 66 LIMIT 1[0m
+  [1m[35mSQL (15.9ms)[0m  INSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (10.0, 50.0, 90, 66, '2015-10-06 18:42:10', '2015-10-06 18:42:10')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 88 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 77 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 66 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (10.0, 50.0, 77, 66, '2015-10-06 18:59:13', '2015-10-06 18:59:13')
+  [1m[36m (11.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (82.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (14.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'clientes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `clientes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `pratos`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos_restaurantes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `pratos_restaurantes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'qualificacoes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `qualificacoes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'receitas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `receitas`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'restaurantes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `restaurantes`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddClienteReferenceToQualificacao (20151006190727)
+  [1m[35m (197.6ms)[0m  ALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_5b62f7ef27`
+FOREIGN KEY (`cliente_id`)
+  REFERENCES `clientes` (`id`)
+
+  [1m[36m (99.9ms)[0m  [1mALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_081869fcbc`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20151006190727')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'clientes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `clientes`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `pratos`[0m
+  [1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos_restaurantes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `pratos_restaurantes`[0m
+  [1m[35m (16.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'qualificacoes'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `qualificacoes`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'receitas'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `receitas`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'restaurantes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `restaurantes`[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 555 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 333 LIMIT 1[0m
+  [1m[35mSQL (42.8ms)[0m  INSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (10.0, 50.0, 555, 333, '2015-10-06 19:29:29', '2015-10-06 19:29:29')
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`vota_prato_development`.`qualificacoes`, CONSTRAINT `fk_rails_5b62f7ef27` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`)): INSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (10.0, 50.0, 555, 333, '2015-10-06 19:29:29', '2015-10-06 19:29:29')
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `qualificacoes` (`valor_gasto`, `nota`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (50.0, 10.0, 44, 66, '2015-10-06 19:37:58', '2015-10-06 19:37:58')
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`vota_prato_development`.`qualificacoes`, CONSTRAINT `fk_rails_5b62f7ef27` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`)): INSERT INTO `qualificacoes` (`valor_gasto`, `nota`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (50.0, 10.0, 44, 66, '2015-10-06 19:37:58', '2015-10-06 19:37:58')
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 44 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 66 LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `qualificacoes` (`nota`, `cliente_id`, `restaurante_id`, `valor_gasto`, `created_at`, `updated_at`) VALUES (10.0, 44, 66, 50.0, '2015-10-06 19:45:42', '2015-10-06 19:45:42')
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`vota_prato_development`.`qualificacoes`, CONSTRAINT `fk_rails_5b62f7ef27` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`)): INSERT INTO `qualificacoes` (`nota`, `cliente_id`, `restaurante_id`, `valor_gasto`, `created_at`, `updated_at`) VALUES (10.0, 44, 66, 50.0, '2015-10-06 19:45:42', '2015-10-06 19:45:42')
+  [1m[36m (13.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO `qualificacoes` (`nota`, `cliente_id`, `restaurante_id`, `valor_gasto`, `created_at`, `updated_at`) VALUES (10.0, 44, 66, 50.0, '2015-10-06 19:45:42', '2015-10-06 19:45:42')[0m
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`vota_prato_development`.`qualificacoes`, CONSTRAINT `fk_rails_5b62f7ef27` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`)): INSERT INTO `qualificacoes` (`nota`, `cliente_id`, `restaurante_id`, `valor_gasto`, `created_at`, `updated_at`) VALUES (10.0, 44, 66, 50.0, '2015-10-06 19:45:42', '2015-10-06 19:45:42')
+  [1m[35m (6.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Exists (22.7ms)[0m  SELECT  1 AS one FROM `clientes` WHERE `clientes`.`nome` = BINARY 'Tassyo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `clientes` (`nome`, `idade`, `created_at`, `updated_at`) VALUES ('Tassyo', 25, '2015-10-06 20:20:39', '2015-10-06 20:20:39')[0m
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mCliente Exists (31.8ms)[0m  [1mSELECT  1 AS one FROM `clientes` WHERE (`clientes`.`nome` = BINARY 'Tassyo' AND `clientes`.`id` != 1) LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mRestaurante Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Burguer King' AND `restaurantes`.`id` != 3) LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Av. Rio Branco, Centro' AND `restaurantes`.`id` != 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (10.0, 23.3, 1, 3, '2015-10-06 20:22:25', '2015-10-06 20:22:25')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mQualificacao Load (21.0ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCliente Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `clientes` WHERE `clientes`.`nome` = BINARY 'Maria' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `clientes` (`nome`, `idade`, `created_at`, `updated_at`) VALUES ('Maria', 50, '2015-10-06 20:28:14', '2015-10-06 20:28:14')
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT `clientes`.* FROM `clientes`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCliente Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `clientes` WHERE (`clientes`.`nome` = BINARY 'Maria' AND `clientes`.`id` != 2) LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Burguer King' AND `restaurantes`.`id` != 3) LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Av. Rio Branco, Centro' AND `restaurantes`.`id` != 3) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `qualificacoes` (`nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`, `updated_at`) VALUES (7.0, 17.9, 2, 3, '2015-10-06 20:29:10', '2015-10-06 20:29:10')[0m
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCliente Exists (0.4ms)[0m  SELECT  1 AS one FROM `clientes` WHERE (`clientes`.`nome` = BINARY 'Maria' AND `clientes`.`id` != 2) LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Burguer King' AND `restaurantes`.`id` != 3) LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Av. Rio Branco, Centro' AND `restaurantes`.`id` != 3) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mQualificacao Load (15.0ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = BINARY 'Stacker Triplo' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = BINARY 'Stacker Triplo' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = BINARY 'Stacker' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Burguer King' AND `restaurantes`.`id` != 3) LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Av. Rio Branco, Centro' AND `restaurantes`.`id` != 3) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`nome`, `created_at`, `updated_at`) VALUES ('Stacker', '2015-10-06 21:03:39', '2015-10-06 21:03:39')
+  [1m[36mSQL (9.6ms)[0m  [1mINSERT INTO `pratos_restaurantes` (`restaurante_id`, `prato_id`) VALUES (3, 1)[0m
+  [1m[35m (19.8ms)[0m  COMMIT
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35mPrato Load (16.6ms)[0m  SELECT `pratos`.* FROM `pratos` INNER JOIN `pratos_restaurantes` ON `pratos`.`id` = `pratos_restaurantes`.`prato_id` WHERE `pratos_restaurantes`.`restaurante_id` = 3
+  [1m[36mRestaurante Load (11.9ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = BINARY 'Big Mac' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Mc Donald\'s' AND `restaurantes`.`id` != 1) LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Dias da Cruz, 156' AND `restaurantes`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `pratos` (`nome`, `created_at`, `updated_at`) VALUES ('Big Mac', '2015-10-06 21:15:16', '2015-10-06 21:15:16')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `pratos_restaurantes` (`restaurante_id`, `prato_id`) VALUES (1, 2)
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddForeignKeyPratoIdAndRestauranteIdToPratosRestaurantes (20151006212402)
+  [1m[35m (140.6ms)[0m  ALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_295555769c`
+FOREIGN KEY (`prato_id`)
+  REFERENCES `pratos` (`id`)
+
+  [1m[36m (87.6ms)[0m  [1mALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_7987cd3df4`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20151006212402')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'clientes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `clientes`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `pratos`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos_restaurantes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `pratos_restaurantes`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'qualificacoes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `qualificacoes`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'receitas'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `receitas`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'restaurantes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `restaurantes`[0m
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes` WHERE (nome = 'Mc Donald\'s' and id = 1)[0m
+  [1m[35mRestaurante Load (1.6ms)[0m  SELECT `restaurantes`.* FROM `restaurantes` WHERE (nome = 'Mc Donald\'s' and id = 1)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.4ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = BINARY 'Cheddar McMelt' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`nome` = BINARY 'Mc Donald\'s' AND `restaurantes`.`id` != 1) LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.0ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE (`restaurantes`.`endereco` = BINARY 'Dias da Cruz, 156' AND `restaurantes`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `pratos` (`nome`, `created_at`, `updated_at`) VALUES ('Cheddar McMelt', '2015-10-06 22:45:02', '2015-10-06 22:45:02')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `pratos_restaurantes` (`restaurante_id`, `prato_id`) VALUES (1, 3)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
