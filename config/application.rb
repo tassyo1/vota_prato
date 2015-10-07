@@ -21,6 +21,17 @@ module VotaPrato
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    console do
+      require "pry"
+      config.console = Pry
+      unless defined? Pry::ExtendCommandBundle
+        Pry::ExtendCommandBundle = Module.new
+      end
+      require "rails/console/app"
+      require "rails/console/helpers"
+      TOPLEVEL_BINDING.eval('self').extend ::Rails::ConsoleMethods
+    end
+
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
