@@ -1,0 +1,19 @@
+<h1>Listagem de Restaurantes</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>Especialidade</th>
+  </tr>
+
+<% @restaurantes.each do |restaurante| %>
+  <tr>
+    <td><%= restaurante.id %></td>
+    <td><%= restaurante.nome %></td>
+    <td><%= restaurante.endereco %></td>
+    <td><%= restaurante.especialidade %></td>
+  </tr>
+<% end %>
+</table>
