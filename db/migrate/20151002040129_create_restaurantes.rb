@@ -4,7 +4,7 @@ class CreateRestaurantes < ActiveRecord::Migration
       t.string :nome, limit: 80
 	  t.string :endereco
       t.timestamps null: false
-      #pausa 7.10
+     
     end
   end
 end

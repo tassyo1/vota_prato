@@ -2511,3 +2511,358 @@ Processing by RestaurantesController#show as HTML
   [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
   Rendered restaurantes/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:42:34 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.5ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 123ms (Views: 79.3ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:42:37 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:42:38 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TOkiEH9wG28Y1k4ZPQCsn3+7iyLO2YNHdtpP7zzaquYgnrbCxKTp+hXCn3Ilj/X9RDos5h4oAH+gQ87stf07UQ==", "restaurante"=>{"nome"=>"", "endereco"=>"", "especialidade"=>""}, "commit"=>"Create Restaurante"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered restaurantes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 40.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:44:41 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 73ms (Views: 65.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:44:43 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:44:44 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ELL/CYOPVWl6zcwR4aRr8vCvHkn0kZGC67GRtmm2IQl8xWvbOFun/HfZHXr5KzKQyy65jSRgEro9KBC14JGwvg==", "restaurante"=>{"nome"=>"", "endereco"=>"", "especialidade"=>""}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '' LIMIT 1
+  [1m[36mRestaurante Exists (26.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 71ms (Views: 37.8ms | ActiveRecord: 26.9ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:45:04 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2BuSuO+dItYYQZfSDI2kx0Rb7IxMyFKLlkZxLFO9WS60bAZqVEnQQxVVRrkUAv2lf9pLSJw50bNA3/Av2prImQ==", "restaurante"=>{"nome"=>"d", "endereco"=>"end", "especialidade"=>"espe"}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'd' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'end' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:45:09 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NO+2c6kbkMCBRlcXq7b6lUvDqmyrQqPBjXSXJKsrKeJYmCKhEs9iVYxShnyzOaP3cEINqHuzIPlb7RYnIgy4VQ==", "restaurante"=>{"nome"=>"d", "endereco"=>"end", "especialidade"=>"espe"}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'd' LIMIT 1
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'end' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 84ms (Views: 39.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:45:10 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2hQZr6Zl7pFItJdUnXMJ4AzZDe5ujItjOcCg2rGhEQzH8S0BU1lL0g2AzZK+pVFu7LD82lLsRVafoOA4+EV8w==", "restaurante"=>{"nome"=>"d", "endereco"=>"end", "especialidade"=>"espe"}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'd' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'end' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:45:10 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eAWhNa0uIQANkeDlHrWH3eDiTZxQMXcnQ/dqJqWAYJkUcjXnFvrTlQCFMY4GOt6/22PqWIDA9B+VbuslLKfxLg==", "restaurante"=>{"nome"=>"d", "endereco"=>"end", "especialidade"=>"espe"}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'd' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'end' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:45:11 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF1FQZnJceTENlTLE3ShZ82wJrIZUyMABiQr+gyX67qoKtGTIh2DcckihaAL+/gF9jGBdsmioDjQvar5hbB6DQ==", "restaurante"=>{"nome"=>"d", "endereco"=>"end", "especialidade"=>"espe"}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'd' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'end' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:47:22 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.5ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 167ms (Views: 165.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:47:22 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:47:25 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 67ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:47:25 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurantes" for ::1 at 2015-10-08 19:47:27 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CtJbTfS1JP0DOb+ALllpH0yc5aQ/Ze1WyaRphhEFDp9mpc+fT2HWaA4tbus21jB9dx1CYO+Ubm4fPeiFmCKfKA==", "restaurante"=>{"nome"=>"", "endereco"=>"", "especialidade"=>""}, "commit"=>"Create Restaurante"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered restaurantes/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 85ms (Views: 79.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:47:33 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 81ms (Views: 79.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:55:58 -0300
+
+SyntaxError (/Users/tassyosantana/Documents/Projetos/Ruby/vota_prato/app/controllers/restaurantes_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/restaurantes_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.2ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:55:58 -0300
+
+SyntaxError (/Users/tassyosantana/Documents/Projetos/Ruby/vota_prato/app/controllers/restaurantes_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/restaurantes_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.6ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.5ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 19:56:13 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 55ms (Views: 40.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:56:42 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (1.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/restaurantes/9" for ::1 at 2015-10-08 19:59:56 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"enPb0yiQyCes+GAqTNJvVXj7ofPJT8zeTGDac9VEfaIWBE8Bk0Q6sqHssUFUXTY3Q3oGNxm+T+aa+VtwXGPsFQ==", "id"=>"9"}
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 9[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 9
+  [1m[36m (13.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 50ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 19:59:57 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 161ms (Views: 159.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/restaurantes/53" for ::1 at 2015-10-08 20:00:01 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"beO/jg17R/s/aKTUhVA2FQYPCSIE4bopwyuF4X5Zs5ABlCtctq+1bjJ8db+d3293PY6u5tQQOREVsgTi934iJw==", "id"=>"53"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 53 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 53[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 53
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 22ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 20:00:02 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/restaurantes/53" for ::1 at 2015-10-08 20:00:02 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"beO/jg17R/s/aKTUhVA2FQYPCSIE4bopwyuF4X5Zs5ABlCtctq+1bjJ8db+d3293PY6u5tQQOREVsgTi934iJw==", "id"=>"53"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 53 LIMIT 1[0m
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurante with 'id'=53):
+  app/controllers/restaurantes_controller.rb:12:in `destroy'
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (110.8ms)
+
+
+Started GET "/restaurantes/53" for ::1 at 2015-10-08 20:00:07 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 53 LIMIT 1
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurante with 'id'=53):
+  app/controllers/restaurantes_controller.rb:8:in `show'
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (110.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 20:00:13 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (2.1ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 124ms (Views: 121.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 20:00:13 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.5ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/restaurantes/52" for ::1 at 2015-10-08 20:00:16 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NDDIpHg1MLgBB13m6FeK1mdqFgJr3o8giDoS6kka/XJYR1x2w+HCLQwTjI3w2NO0XOuxxrsvDBheo5PpwD1sxQ==", "id"=>"52"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 52 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 52[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 52
+  [1m[36m (31.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 35ms (ActiveRecord: 32.5ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-08 20:00:16 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-08 20:00:32 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  Rendered restaurantes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 201ms (Views: 199.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-08 20:00:37 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  Rendered restaurantes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/54/edit" for ::1 at 2015-10-08 20:00:51 -0300
+Processing by RestaurantesController#edit as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  Rendered restaurantes/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 20:01:07 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes/new" for ::1 at 2015-10-08 20:01:15 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 97ms (Views: 96.7ms | ActiveRecord: 0.0ms)
