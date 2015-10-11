@@ -2,11 +2,13 @@
 
 
 <% if @restaurante.errors.any? %> 
+<div id="error_explanation">
 	<ul>
 	<% @restaurante.errors.full_messages.each do |msg| %>
 		<li><%= msg %></li>	
 	<% end %>
 	</ul>
+</div>	
 <% end %>
 
 <%= form_for @restaurante do |f| %>
