@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  
   VotaPrato::Application.routes.draw do
-     match 'ola' => 'olamundo#index', via: 'get'
-    end
+    
+   #  match 'ola' => 'olamundo#index', via: 'get'
+  end
 
+resources :qualificacoes
+    resources :clientes
     resources :restaurantes
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
