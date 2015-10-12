@@ -14,6 +14,7 @@ class QualificacoesController < ApplicationController
 
   # GET /qualificacoes/new
   def new
+
     preparar_form
     @qualificacao = Qualificacao.new
 
@@ -25,7 +26,6 @@ class QualificacoesController < ApplicationController
     if params[:restaurante]
       @qualificacao.restaurante = Restaurante.find(params[:restaurante])
     end
-
   end
 
   # GET /qualificacoes/1/edit
@@ -83,12 +83,14 @@ class QualificacoesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def qualificacao_params
-      params.require(:qualificacao).permit(:cliente_id, :restaurante_id, :nota, :valor_gasto)
+    def qualificacao_params 
+        params.require(:qualificacao).permit(:cliente_id, :restaurante_id, :nota, :valor_gasto)
+    
     end
 
     def preparar_form
       @clientes = Cliente.order :nome
       @restaurantes = Restaurante.order :nome
     end
+
 end
