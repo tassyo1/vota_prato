@@ -10079,3 +10079,1204 @@ Started GET "/assets/qualificacoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4
 
 
 Started GET "/assets/clientes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (13.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateComentarios (20151016160613)
+  [1m[35m (39.2ms)[0m  CREATE TABLE `comentarios` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `comentavel_id` int(11), `comentavel_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (47.2ms)[0m  [1mCREATE  INDEX `index_comentarios_on_comentavel_type`  ON `comentarios` (`comentavel_type`) [0m
+  [1m[35m (61.6ms)[0m  CREATE  INDEX `index_comentarios_on_comentavel_id`  ON `comentarios` (`comentavel_id`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20151016160613')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (35.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'clientes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `clientes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'comentarios'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `comentarios`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `pratos`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos_restaurantes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `pratos_restaurantes`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'qualificacoes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `qualificacoes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'receitas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `receitas`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'restaurantes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `restaurantes`
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 13:12:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (0.3ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 725ms (Views: 712.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.self-8eae35569bbbc17d779908548dffba8b9c4e493709fa08b4b02fb389d31ba36e.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/olamundo.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/restaurantes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/qualificacoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/comentarios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/assets/clientes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 13:12:32 -0300
+
+
+Started GET "/comentarios/new" for ::1 at 2015-10-16 13:12:35 -0300
+Processing by ComentariosController#new as HTML
+  Rendered comentarios/_form.html.erb (68.3ms)
+  Rendered comentarios/new.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 143ms (Views: 136.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 13:13:37 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7Alnx0QGyCd9eZYuNGmo+Jim6NOh4wql60klXqPu+PfTg+Bcb2aySDbL9vdKzaUTRNTKhwvXBnpHXaa24CVdA==", "comentario"=>{"conteudo"=>"Muito bom. Recomendo.", "comentavel_id"=>"1", "comentavel_type"=>"Restaurante"}, "commit"=>"Create Comentario"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Muito bom. Recomendo.', 1, 'Restaurante', '2015-10-16 16:13:37', '2015-10-16 16:13:37')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/1
+Completed 302 Found in 25ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/comentarios/1" for ::1 at 2015-10-16 13:13:37 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mComentario Load (0.4ms)[0m  SELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 1 LIMIT 1
+  Rendered comentarios/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 134ms (Views: 103.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:17:12 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 169ms (Views: 126.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:18:12 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.4ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.7ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 86ms (Views: 82.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:18:14 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (6.8ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.5ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.9ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 78ms (Views: 68.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-16 13:18:21 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.7ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:18:27 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.6ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:18:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 294ms (Views: 267.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 13:18:51 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.5ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  Rendered qualificacoes/show.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 105ms (Views: 100.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:19:16 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.5ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 117ms (Views: 114.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:20:04 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (1.6ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:20:24 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 128ms (Views: 116.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 13:20:28 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.5ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  Rendered qualificacoes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qualificacoes/10/edit" for ::1 at 2015-10-16 13:20:35 -0300
+Processing by QualificacoesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  Rendered qualificacoes/_form.html.erb (12.8ms)
+  Rendered qualificacoes/edit.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:20:37 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 13:41:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.5ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 256ms (Views: 232.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-16 13:41:31 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35m (32.8ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  Rendered comentarios/_novo_comentario.html.erb (19.5ms)
+  Rendered restaurantes/show.html.erb within layouts/application (102.5ms)
+Completed 200 OK in 157ms (Views: 116.8ms | ActiveRecord: 35.6ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 13:42:36 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PBE1bd89BQfIMzEe3bpr7OckTQSfkg1KsrGq7nj6LfBQ7x9zs5CE7nUd+J24QPvbSFWFjc063XnMAfjh2fUDZw==", "comentario"=>{"comentavel_id"=>"54", "comentavel_type"=>"Restaurante", "conteudo"=>"Não gosto muito do Bob's"}, "commit"=>"Create Comentario"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Não gosto muito do Bob\'s', 54, 'Restaurante', '2015-10-16 16:42:36', '2015-10-16 16:42:36')
+  [1m[36m (11.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/2
+Completed 302 Found in 17ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/comentarios/2" for ::1 at 2015-10-16 13:42:36 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mComentario Load (0.6ms)[0m  SELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 2 LIMIT 1
+  Rendered comentarios/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 13:42:50 -0300
+Processing by ComentariosController#index as HTML
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios`[0m
+  Rendered comentarios/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 87ms (Views: 86.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 13:43:07 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:55:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 303ms (Views: 275.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 13:55:47 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  Rendered comentarios/_novo_comentario.html.erb (22.9ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 88ms (Views: 82.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 13:56:08 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uClXcqR+3M9cl1r62jjkfgspO/ZZZO7o818wsdwKZ3bU131syNNdJuG5k3m/wnRJpFjzfwvMPtuN72K+fQVJ4Q==", "comentario"=>{"comentavel_id"=>"10", "comentavel_type"=>"Qualificacao", "conteudo"=>"Concordo plenamente :D"}, "commit"=>"Create Comentario"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Concordo plenamente :D', 10, 'Qualificacao', '2015-10-16 16:56:08', '2015-10-16 16:56:08')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/comentarios/3
+Completed 302 Found in 39ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/comentarios/3" for ::1 at 2015-10-16 13:56:09 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComentario Load (0.3ms)[0m  [1mSELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 3 LIMIT 1[0m
+  Rendered comentarios/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 85.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 13:56:17 -0300
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (1.0ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/comentarios/3" for ::1 at 2015-10-16 13:56:29 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComentario Load (0.3ms)[0m  [1mSELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 3 LIMIT 1[0m
+  Rendered comentarios/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 86ms (Views: 85.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 13:56:31 -0300
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (0.3ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 13:57:39 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 14:35:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.6ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 332ms (Views: 279.0ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 14:35:12 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  Rendered comentarios/_novo_comentario.html.erb (24.6ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 124ms (Views: 118.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 14:35:12 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1
+  [1m[36mCliente Load (0.9ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  Rendered comentarios/_novo_comentario.html.erb (1.3ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-16 14:53:06 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mComentario Exists (6.9ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 10 AND `comentarios`.`comentavel_type` = 'Qualificacao' LIMIT 1
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 10 AND `comentarios`.`comentavel_type` = 'Qualificacao'[0m
+  Rendered comentarios/_comentario.html.erb (1.1ms)
+  Rendered comentarios/_comentarios.html.erb (50.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.9ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (92.6ms)
+Completed 200 OK in 193ms (Views: 149.4ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 14:53:44 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+030JPHjOJt/nkDCV7czUCHmtiZy4/n0EZ23VQZR63GXs946nU65csKwiUEyTaNnjpd+ryBLKcdvLeVap17F5g==", "comentario"=>{"comentavel_id"=>"10", "comentavel_type"=>"Qualificacao", "conteudo"=>"Burguer King é muito bom."}, "commit"=>"Create Comentario"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Burguer King é muito bom.', 10, 'Qualificacao', '2015-10-16 17:53:44', '2015-10-16 17:53:44')[0m
+  [1m[35m (7.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/comentarios/4
+Completed 302 Found in 12ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/comentarios/4" for ::1 at 2015-10-16 14:53:44 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 4 LIMIT 1[0m
+  Rendered comentarios/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 14:53:47 -0300
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (0.2ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 14:53:55 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 87ms (Views: 86.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/3" for ::1 at 2015-10-16 14:53:57 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35mComentario Exists (0.2ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 3 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  Rendered comentarios/_comentarios.html.erb (0.8ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.0ms)
+  Rendered restaurantes/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 14:54:15 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1BWMMqA8szUKw0yP297yFc7bKh65Ct7YBBsjY42a2Ri466YszJEy3LfthQy+JGIiYaril+uiDut6q3FsLJX3jw==", "comentario"=>{"comentavel_id"=>"3", "comentavel_type"=>"Restaurante", "conteudo"=>"Recomendo o BK"}, "commit"=>"Create Comentario"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Recomendo o BK', 3, 'Restaurante', '2015-10-16 17:54:15', '2015-10-16 17:54:15')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/5
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/comentarios/5" for ::1 at 2015-10-16 14:54:15 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mComentario Load (0.3ms)[0m  SELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 5 LIMIT 1
+  Rendered comentarios/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 14:54:18 -0300
+Processing by ComentariosController#index as HTML
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios`[0m
+  Rendered comentarios/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comentarios/new" for ::1 at 2015-10-16 14:54:35 -0300
+Processing by ComentariosController#new as HTML
+  Rendered comentarios/_form.html.erb (4.4ms)
+  Rendered comentarios/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 14:54:37 -0300
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (0.2ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 14:54:45 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 81ms (Views: 79.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-16 14:54:47 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35mComentario Exists (0.2ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 54 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 54 AND `comentarios`.`comentavel_type` = 'Restaurante'[0m
+  Rendered comentarios/_comentario.html.erb (0.2ms)
+  Rendered comentarios/_comentarios.html.erb (2.8ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.3ms)
+  Rendered restaurantes/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-16 14:54:54 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35mComentario Exists (0.1ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 54 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 54 AND `comentarios`.`comentavel_type` = 'Restaurante'[0m
+  Rendered comentarios/_comentario.html.erb (0.2ms)
+  Rendered comentarios/_comentarios.html.erb (6.5ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.2ms)
+  Rendered restaurantes/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 14:54:56 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/3" for ::1 at 2015-10-16 14:54:58 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36mComentario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 3 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.2ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 3 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.2ms)
+  Rendered comentarios/_comentarios.html.erb (3.5ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.4ms)
+  Rendered restaurantes/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes/3" for ::1 at 2015-10-16 14:58:44 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36mComentario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 3 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (1.2ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.3ms)
+  Rendered restaurantes/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:05:42 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.7ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:05:48 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:05:52 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:05:53 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:05:55 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.3ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:05:55 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:05:56 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:05:58 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:05:58 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:07:33 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:07:36 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 98ms (Views: 96.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:07:37 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:07:38 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.3ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:07:39 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:07:39 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:07:41 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:07:48 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 97ms (Views: 96.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:07:50 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comentarios" for ::1 at 2015-10-16 15:07:59 -0300
+Processing by ComentariosController#index as HTML
+  [1m[35mComentario Load (0.2ms)[0m  SELECT `comentarios`.* FROM `comentarios`
+  Rendered comentarios/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 93ms (Views: 92.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:08:03 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:08:07 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.3ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 89ms (Views: 86.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:08:08 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-16 15:08:08 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.3ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-16 15:08:11 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:08:12 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:08:12 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:08:34 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/16" for ::1 at 2015-10-16 15:08:39 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16
+  [1m[36mComentario Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 16 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (1.3ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.3ms)
+  Rendered restaurantes/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 15:08:52 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZU2TdJsMkN1tnUGiJyIgH5wlJsqtERJQM5Q0c3lYGGIJs7lq96ERNNCziCFC2LAoM1TuQ/+5wmNNJGZ82Fc29Q==", "comentario"=>{"comentavel_id"=>"16", "comentavel_type"=>"Restaurante", "conteudo"=>"Nunca fui nesse restaurante."}, "commit"=>"Create Comentario"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Nunca fui nesse restaurante.', 16, 'Restaurante', '2015-10-16 18:08:52', '2015-10-16 18:08:52')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/comentarios/6
+Completed 302 Found in 36ms (ActiveRecord: 32.9ms)
+
+
+Started GET "/comentarios/6" for ::1 at 2015-10-16 15:08:52 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mComentario Load (0.4ms)[0m  [1mSELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 6 LIMIT 1[0m
+  Rendered comentarios/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:08:56 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/16" for ::1 at 2015-10-16 15:09:00 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16
+  [1m[36mComentario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 16 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.2ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 16 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.2ms)
+  Rendered comentarios/_comentarios.html.erb (2.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.1ms)
+  Rendered restaurantes/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/comentarios" for ::1 at 2015-10-16 15:09:09 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pD2Ihb9wfu87/twV4EY4MpbVvmaaXFUxeycnO8/uCcvIw6Kb093/BobQFZaFvKgFOaR278j0hQIFl3U0buEnXA==", "comentario"=>{"comentavel_id"=>"16", "comentavel_type"=>"Restaurante", "conteudo"=>"Gosto de massa"}, "commit"=>"Create Comentario"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`) VALUES ('Gosto de massa', 16, 'Restaurante', '2015-10-16 18:09:09', '2015-10-16 18:09:09')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/comentarios/7
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/comentarios/7" for ::1 at 2015-10-16 15:09:09 -0300
+Processing by ComentariosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mComentario Load (0.3ms)[0m  SELECT  `comentarios`.* FROM `comentarios` WHERE `comentarios`.`id` = 7 LIMIT 1
+  Rendered comentarios/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:09:12 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/16" for ::1 at 2015-10-16 15:09:16 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 16[0m
+  [1m[35mComentario Exists (11.9ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 16 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  [1m[36mComentario Load (0.2ms)[0m  [1mSELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 16 AND `comentarios`.`comentavel_type` = 'Restaurante'[0m
+  Rendered comentarios/_comentario.html.erb (0.4ms)
+  Rendered comentarios/_comentarios.html.erb (14.8ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.2ms)
+  Rendered restaurantes/show.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 83ms (Views: 69.5ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-16 15:09:30 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.3ms)

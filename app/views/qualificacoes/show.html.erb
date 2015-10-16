@@ -17,8 +17,11 @@
 
 <p>
   <strong>Valor gasto:</strong>
-  <%= @qualificacao.valor_gasto %>
+  <%= valor_formatado(@qualificacao.valor_gasto) %>
 </p>
 
 <%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Voltar', qualificacoes_path %>
+
+<%= comentarios @qualificacao %>
+<%= novo_comentario @qualificacao %>

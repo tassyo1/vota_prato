@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   
+  resources :comentarios
   VotaPrato::Application.routes.draw do
     
+  resources :comentarios
    #  match 'ola' => 'olamundo#index', via: 'get'
   end
 

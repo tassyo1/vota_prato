@@ -12,4 +12,7 @@ class Qualificacao < ActiveRecord::Base
 	 validates_presence_of :restaurante_id , :message => " - deve ser preenchido"	
 	validates_associated :cliente, :restaurante
 
+
+	 has_many :comentarios , as: :comentavel
+
 end	

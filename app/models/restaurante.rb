@@ -8,6 +8,7 @@ validates_uniqueness_of :endereco, message: " - endereço já cadastrado"
 
 validate :primeira_letra_deve_ser_maiuscula
 
+ has_many :comentarios , as: :comentavel
 	private
 	def primeira_letra_deve_ser_maiuscula
 		errors.add(:nome," - a primeira letra deve ser maiúscula") unless nome =~  /[A-Z].*/
