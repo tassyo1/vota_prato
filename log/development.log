@@ -9318,3 +9318,764 @@ Processing by Rails::InfoController#properties as HTML
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
   Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/railties-4.2.4/lib/rails/templates/rails/info/properties.html.erb (0.3ms)
 Completed 200 OK in 75ms (Views: 53.2ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-12 19:26:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.2ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 375ms (Views: 355.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/clientes.xml" for ::1 at 2015-10-12 19:26:23 -0300
+Processing by ClientesController#index as XML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template clientes/index, application/index with {:locale=>[:en], :formats=>[:xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tassyosantana/Documents/Projetos/Ruby/vota_prato/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (82.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.9ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (128.9ms)
+
+
+Started GET "/clientes/1" for ::1 at 2015-10-12 19:26:36 -0300
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  Rendered clientes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 112ms (Views: 67.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes/1.xml" for ::1 at 2015-10-12 19:26:41 -0300
+Processing by ClientesController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template clientes/show, application/show with {:locale=>[:en], :formats=>[:xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tassyosantana/Documents/Projetos/Ruby/vota_prato/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (62.6ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.6ms)
+
+
+Started GET "/restaurantes.xml" for ::1 at 2015-10-12 19:27:02 -0300
+Processing by RestaurantesController#index as XML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+Completed 200 OK in 110ms (Views: 67.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-12 19:32:05 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.2ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 70ms (Views: 69.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes.xml" for ::1 at 2015-10-12 19:32:09 -0300
+Processing by ClientesController#index as XML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template clientes/index, application/index with {:locale=>[:en], :formats=>[:xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tassyosantana/Documents/Projetos/Ruby/vota_prato/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/tassyosantana/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (56.9ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.6ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.4ms)
+
+
+Started GET "/clientes.json" for ::1 at 2015-10-12 19:32:18 -0300
+Processing by ClientesController#index as JSON
+  [1m[36mCliente Load (0.3ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.json.jbuilder (25.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:41:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 270ms (Views: 229.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/restaurantes/54" for ::1 at 2015-10-12 19:41:41 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35m (20.3ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 54
+  Rendered restaurantes/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 110ms (Views: 82.2ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:43:09 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/3" for ::1 at 2015-10-12 19:43:17 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 3[0m
+  Rendered restaurantes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:43:24 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/19" for ::1 at 2015-10-12 19:43:26 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mRestaurante Load (0.6ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 19
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 19[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 19
+  Rendered restaurantes/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:43:32 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:43:32 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (1.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-12 19:45:08 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 91ms (Views: 87.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-12 19:45:12 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  Rendered qualificacoes/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-12 19:45:36 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (2.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:46:01 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-12 19:46:09 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (15.9ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 79ms (Views: 61.4ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-12 19:46:28 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1  [["id", 54]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1
+  Rendered qualificacoes/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qualificacoes/10" for ::1 at 2015-10-12 19:46:39 -0300
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  Rendered qualificacoes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qualificacoes/10/edit" for ::1 at 2015-10-12 19:46:41 -0300
+Processing by QualificacoesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 10 LIMIT 1
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1
+  Rendered qualificacoes/_form.html.erb (55.0ms)
+  Rendered qualificacoes/edit.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-12 19:46:44 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.2ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.9ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:47:02 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/restaurantes/50" for ::1 at 2015-10-12 19:47:11 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K6kwRWK/hkVqo8afCU0iwNKxchYv0VIyspRnPJ0GCE6bNlgrWtbZHuuLcOcCQ11HuZWUssn8peDXS1Zib8ArbQ==", "id"=>"50"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 50 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (41.6ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 50[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 50
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 165ms (ActiveRecord: 138.3ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:47:12 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/restaurantes/48" for ::1 at 2015-10-12 19:47:14 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EDg83K/r0QggbnAlUZUW5C4tTyDMo5gozQzg5tjaV5Sgp1Syl4KOU6FGxl1am2ljRQmphCqOb/qo09G4Khx0tw==", "id"=>"48"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 48 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 48[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 48
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:47:14 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/restaurantes/45" for ::1 at 2015-10-12 19:47:17 -0300
+Processing by RestaurantesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cng/kP6fXEz81vkXKKA2QWgBIhnYi9Lnu02QFuNTJkHC51f+xvYDF33+T28jrknGAyXEvT6mJTXekqFIEZUFYg==", "id"=>"45"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 45 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `pratos_restaurantes` WHERE `pratos_restaurantes`.`restaurante_id` = 45[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `restaurantes` WHERE `restaurantes`.`id` = 45
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurantes
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-12 19:47:17 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered restaurantes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.4ms)
+  [1m[36mRestaurante Load (28.9ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+
+
+Started GET "/" for ::1 at 2015-10-14 01:46:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (9.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 57ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2015-10-14 01:46:51 -0300
+Processing by Rails::InfoController#properties as HTML
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  Rendered /Users/tassyosantana/.rvm/gems/ruby-2.2.3/gems/railties-4.2.4/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-14 01:47:07 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.6ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC[0m
+  Rendered restaurantes/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 569ms (Views: 550.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/restaurantes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/olamundo.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/scaffolds.self-8eae35569bbbc17d779908548dffba8b9c4e493709fa08b4b02fb389d31ba36e.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/qualificacoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
+
+
+Started GET "/assets/clientes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-14 01:47:07 -0300
