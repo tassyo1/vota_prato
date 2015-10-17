@@ -7,15 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<ul>
-		<% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
-			<li>
-				<%= link_to controller_name, controller: controller_name %>
-			</li>
-		<% end %>	
-	</ul>	
-
+	<%= menu_principal %w(restaurantes clientes qualificacoes)	 %>
 <%= yield %>
 
 </body>
