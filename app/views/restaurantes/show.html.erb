@@ -18,7 +18,7 @@
 <b> Qualificações:</b>
 	<%= @restaurante.qualificacoes.count %> <br/>
 <b> Preço médio: </b>
-	<%= @restaurante.qualificacoes.average(:valor_gasto) %> <br/> <br/>		
+	<%= valor_formatado(@restaurante.qualificacoes.average(:valor_gasto)) %> <br/> <br/>		
 <%= link_to 'Editar', action: 'edit', id: @restaurante %> |
 <%= link_to 'Voltar', action: 'index' %> |
 <%= link_to 'Qualificar este restaurante', controller: "qualificacoes", action: "new", restaurante: @restaurante %>
