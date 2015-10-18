@@ -12056,3 +12056,38 @@ Processing by RestaurantesController#index as HTML
   Rendered restaurantes/index.html.erb within layouts/application (3.1ms)
   Rendered layouts/_menu_principal.html.erb (0.4ms)
 Completed 200 OK in 94ms (Views: 91.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/clientes" for ::1 at 2015-10-18 16:55:25 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (7.5ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_menu_principal.html.erb (1.4ms)
+Completed 200 OK in 488ms (Views: 453.0ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/qualificacoes" for ::1 at 2015-10-18 16:55:27 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.3ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m
+  [1m[35mCliente Load (0.3ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 54 LIMIT 1[0m  [["id", 54]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 16 LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 18 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (86.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 193ms (Views: 181.6ms | ActiveRecord: 5.7ms)

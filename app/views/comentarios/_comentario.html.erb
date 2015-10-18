@@ -1,4 +1,11 @@
-<p>
+<p id="comentario_<%= comentario.id %>">
    <%= comentario.conteudo %> -
-   <%= link_to  '(remover)', comentario, method: :delete %>
+   <%= link_to  '(remover)', comentario, method: :delete,
+   				remote: true,
+   				id: "remover_comentario_#{comentario.id}" %>
 </p>
+
+<% content_for :js do %>
+
+
+<% end %>	
