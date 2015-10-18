@@ -58,6 +58,7 @@ class ComentariosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to comentarios_url, notice: 'Comentario was successfully destroyed.' }
       format.json { head :no_content }
+      format.js {head :ok }
     end
   end
 
