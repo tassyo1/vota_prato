@@ -13706,3 +13706,141 @@ Processing by RestaurantesController#show as HTML
   Rendered restaurantes/show.html.erb within layouts/application (106.1ms)
   Rendered layouts/_menu_principal.html.erb (0.2ms)
 Completed 200 OK in 202ms (Views: 184.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/restaurantes" for ::1 at 2015-10-20 12:44:51 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (5.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (81.8ms)
+  Rendered layouts/_menu_principal.html.erb (1.0ms)
+Completed 200 OK in 502ms (Views: 459.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/clientes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/restaurantes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/comentarios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/scaffolds.self-8eae35569bbbc17d779908548dffba8b9c4e493709fa08b4b02fb389d31ba36e.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/qualificacoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/assets/olamundo.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-20 12:44:52 -0200
+
+
+Started GET "/restaurantes?page=2" for ::1 at 2015-10-20 12:44:55 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (35.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes?page=3" for ::1 at 2015-10-20 12:45:00 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 6
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (35.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 121ms (Views: 120.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurantes?page=4" for ::1 at 2015-10-20 12:45:01 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 9
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (40.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes?page=5" for ::1 at 2015-10-20 12:45:03 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"5"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 12
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (43.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 125ms (Views: 123.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes?page=6" for ::1 at 2015-10-20 12:45:04 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"6"}
+  [1m[35mRestaurante Load (0.5ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 15
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 120.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurantes?page=7" for ::1 at 2015-10-20 12:45:05 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"7"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 18
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (42.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 106.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes?page=9" for ::1 at 2015-10-20 12:45:07 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 24
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (40.3ms)
+  Rendered layouts/_menu_principal.html.erb (1.3ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes?page=11" for ::1 at 2015-10-20 12:45:08 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[35mRestaurante Load (0.5ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 30
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (34.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.7ms)
