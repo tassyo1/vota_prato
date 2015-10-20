@@ -1,4 +1,9 @@
 <h1> Exibindo Restaurante</h1>
+
+<p>
+	<b>Foto:</b>
+	<%= image_tag @restaurante.foto.url(:original) %>
+</p>
 <p>
 	<b>Nome: </b>
 	<%= @restaurante.nome %>
