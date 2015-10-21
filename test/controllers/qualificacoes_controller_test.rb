@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class QualificacoesControllerTest < ActionController::TestCase
-  setup do
+  '''setup do
     @qualificacao = qualificacoes(:one)
   end
 
@@ -17,7 +17,7 @@ class QualificacoesControllerTest < ActionController::TestCase
   end
 
   test "should create qualificacao" do
-    assert_difference('Qualificacao.count') do
+    assert_difference(Qualificacao.count) do
       post :create, qualificacao: { cliente_id: @qualificacao.cliente_id, nota: @qualificacao.nota, restaurante_id: @qualificacao.restaurante_id, valor_gastor: @qualificacao.valor_gastor }
     end
 
@@ -40,10 +40,10 @@ class QualificacoesControllerTest < ActionController::TestCase
   end
 
   test "should destroy qualificacao" do
-    assert_difference('Qualificacao.count', -1) do
+    assert_difference(Qualificacao.count, -1) do
       delete :destroy, id: @qualificacao
     end
 
     assert_redirected_to qualificacoes_path
-  end
+  end'''
 end

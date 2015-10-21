@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ComentariosControllerTest < ActionController::TestCase
-  setup do
+ ''' setup do
     @comentario = comentarios(:one)
   end
 
@@ -17,7 +17,7 @@ class ComentariosControllerTest < ActionController::TestCase
   end
 
   test "should create comentario" do
-    assert_difference('Comentario.count') do
+    assert_difference(Comentario.count) do
       post :create, comentario: { comentavel_id: @comentario.comentavel_id, comentavel_type: @comentario.comentavel_type, conteudo: @comentario.conteudo }
     end
 
@@ -40,10 +40,10 @@ class ComentariosControllerTest < ActionController::TestCase
   end
 
   test "should destroy comentario" do
-    assert_difference('Comentario.count', -1) do
+    assert_difference(Comentario.count, -1) do
       delete :destroy, id: @comentario
     end
 
     assert_redirected_to comentarios_path
-  end
+  end'''
 end

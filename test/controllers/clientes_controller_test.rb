@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ClientesControllerTest < ActionController::TestCase
-  setup do
+  '''setup do
     @cliente = clientes(:one)
   end
 
@@ -17,7 +17,7 @@ class ClientesControllerTest < ActionController::TestCase
   end
 
   test "should create cliente" do
-    assert_difference('Cliente.count') do
+    assert_difference(Cliente.count) do
       post :create, cliente: { idade: @cliente.idade, nome: @cliente.nome }
     end
 
@@ -40,10 +40,10 @@ class ClientesControllerTest < ActionController::TestCase
   end
 
   test "should destroy cliente" do
-    assert_difference('Cliente.count', -1) do
+    assert_difference(Cliente.count, -1) do
       delete :destroy, id: @cliente
     end
 
     assert_redirected_to clientes_path
-  end
+  end'''
 end
