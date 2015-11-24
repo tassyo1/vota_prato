@@ -12,8 +12,9 @@
 fasano:
   nome: Fasano
   endereco: Rua Vergueiro
-  
+  especialidade: Massa
 
 fogo_de_chao:
   nome: Fogo de Chao
   endereco: Avenida dos Bandeirantes
+  especialidade: Massa
