@@ -16876,3 +16876,543 @@ Processing by ClientesController#index as HTML
   Rendered clientes/index.html.erb within layouts/application (1.1ms)
   Rendered layouts/_menu_principal.html.erb (0.6ms)
 Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:04:14 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (1.5ms)
+Completed 200 OK in 249ms (Views: 241.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:17:53 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (35.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 110.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:17:54 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_menu_principal.html.erb (1.4ms)
+Completed 200 OK in 108ms (Views: 104.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:17:55 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:46:01 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 1350ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (CssSyntaxError: /home/tassyo1/Documentos/Projetos/Ruby/vota_prato/app/assets/stylesheets/application.css.sass:15:2: Unknown word
+ */
+ *
+ ^
+ * @import "bootstrap-sprockets" @import "bootstrap" */):
+    2: <html>
+    3: <head>
+    4:   <title>VotaPrato</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> 
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8:   <%= yield :css %>
+  apply.from (eval at <anonymous> ((execjs):25451:8), <anonymous>:1:39)
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1703111863373075954_32016340'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:47:43 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Indenting at the beginning of the document is illegal.):
+    2: <html>
+    3: <head>
+    4:   <title>VotaPrato</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> 
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8:   <%= yield :css %>
+  app/assets/stylesheets/application.css.sass:2
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1703111863373075954_32016340'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:49:00 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (1.4ms)
+Completed 200 OK in 3960ms (Views: 3959.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f3cfe3c8e884713b27a019f503a2c92f9886e11506e544adab5076799d78f47e.css?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-11-24 16:49:04 -0200
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:49:15 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (27.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 114.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:49:34 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:49:36 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:49:38 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 90ms (Views: 86.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:49:42 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.2ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:49:43 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:53:52 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (2.3ms)
+Completed 200 OK in 131ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:54:00 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 126ms (Views: 125.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:54:03 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:54:04 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:54:06 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:54:08 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:54:08 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:54:13 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:55:43 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 123.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-11-24 16:55:45 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (11.2ms)
+  Rendered comentarios/_novo_comentario.html.erb (16.3ms)
+  Rendered restaurantes/show.html.erb within layouts/application (54.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 161ms (Views: 155.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:55:59 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes?page=2" for 127.0.0.1 at 2015-11-24 16:56:02 -0200
+Processing by RestaurantesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 3
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:56:05 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:56:10 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:56:11 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:56:12 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 112.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:56:14 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:56:15 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:56:16 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:57:57 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:58:13 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 107.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:58:14 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:58:15 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 98.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:58:16 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:58:17 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:59:05 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 114ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:59:07 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:59:08 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 99.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:59:09 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:59:10 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 112.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:59:10 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 130.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:59:12 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 105.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:59:13 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:59:13 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 16:59:14 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:59:18 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-11-24 16:59:53 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-11-24 16:59:55 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 106.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-11-24 16:59:56 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 136ms (Views: 135.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-11-24 16:59:58 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (0.7ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.1ms)
+  Rendered restaurantes/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 100.7ms | ActiveRecord: 0.3ms)
