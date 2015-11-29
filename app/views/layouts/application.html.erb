@@ -10,8 +10,11 @@
 <body>
 	<%= menu_principal %w(restaurantes clientes qualificacoes)	 %>
 
+	<div class="container">
+	</div>
+	<div class="col-lg-10 col-lg-offset-1">
 	<%= yield %>
-
+	</div>
 
 <script>
 	<%= yield :js %>
