@@ -1,8 +1,18 @@
-		<ul class="nav navbar-nav navbar-left">
-		  <li> <%= link_to 'Home', controller: 'pages' %> </li> 
-		  <% opcoes.each do | controller_name | %>
-			<li>
-				<%= link_to controller_name.slice(0,1).capitalize + controller_name.slice(1..-1), controller: controller_name %>
-			</li>
-		  <% end %>	
-		</ul>
+<nav class="navbar navbar-inverse">		
+	<div class="container">
+		<div class="navbar-header">
+      		<%= link_to 'Home', root_path, class: 'navbar-brand' %>
+    	</div>
+			<div id="navbar">
+
+				<ul class="nav navbar-nav navbar-left">
+				  <% opcoes.each do | controller_name | %>
+					<li>
+						<%= link_to controller_name.slice(0,1).capitalize + controller_name.slice(1..-1), controller: controller_name %>
+					</li>
+				  <% end %>	
+				</ul>
+				
+			</div>
+	</div>
+</nav>
