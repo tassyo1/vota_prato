@@ -8,7 +8,7 @@
 				<ul class="nav navbar-nav navbar-left">
 				  <% opcoes.each do | controller_name | %>
 					<li>
-						<%= link_to controller_name.slice(0,1).capitalize + controller_name.slice(1..-1), controller: controller_name %>
+						<%= link_to controller_name.capitalize, controller: controller_name %>
 					</li>
 				  <% end %>	
 				</ul>
