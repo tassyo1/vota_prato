@@ -11,4 +11,10 @@ Rails.application.routes.draw do
   match 'busca' => 'restaurantes#busca', via: 'get' #rota criada para teste da action busca
 
   root to: 'pages#index'
+
+  match 'rack',
+	 :to => proc{|env| [200, {"Content-Type" => "text/html"}, ["App Rack numa rota Rails"]]}, via:'get'
+
+
+
 end

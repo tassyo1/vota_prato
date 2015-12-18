@@ -20080,3 +20080,12 @@ Completed 200 OK in 139ms (Views: 138.8ms | ActiveRecord: 0.0ms)
   [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Big' LIMIT 1[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Bigorna', 'Rua Big', 'big', '2015-12-17 23:24:35', '2015-12-17 23:24:35')
   [1m[36m (24.7ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Graal' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Queluz' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Graal', 'Queluz', 'self-service', '2015-12-18 15:19:21', '2015-12-18 15:19:21')
+  [1m[36m (45.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/rack" for 127.0.0.1 at 2015-12-18 18:44:43 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
