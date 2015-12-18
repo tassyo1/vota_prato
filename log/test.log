@@ -1749,3 +1749,1697 @@ RestauranteTest: test_restaurante
   [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (8.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:06:51', '2015-12-17 22:06:51', 500271007)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:06:51', '2015-12-17 22:06:51', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:06:51', '2015-12-17 22:06:51', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:06:51', '2015-12-17 22:06:51', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (38.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:09:00', '2015-12-17 22:09:00', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:09:00', '2015-12-17 22:09:00', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:09:00', '2015-12-17 22:09:00', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:09:00', '2015-12-17 22:09:00', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (53.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:20:23', '2015-12-17 22:20:23', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:20:23', '2015-12-17 22:20:23', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:20:23', '2015-12-17 22:20:23', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:20:23', '2015-12-17 22:20:23', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (73.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:23:13', '2015-12-17 22:23:13', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:23:13', '2015-12-17 22:23:13', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:23:13', '2015-12-17 22:23:13', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:23:13', '2015-12-17 22:23:13', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (42.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:28:22', '2015-12-17 22:28:22', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:28:22', '2015-12-17 22:28:22', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:28:22', '2015-12-17 22:28:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:28:22', '2015-12-17 22:28:22', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (48.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:31:19', '2015-12-17 22:31:19', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:31:19', '2015-12-17 22:31:19', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:31:19', '2015-12-17 22:31:19', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:31:19', '2015-12-17 22:31:19', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (41.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`name` = 'Fasano' LIMIT 1[0m
+Mysql2::Error: Unknown column 'restaurantes.name' in 'where clause': SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`name` = 'Fasano' LIMIT 1
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`name` = 'Botequin' LIMIT 1
+Mysql2::Error: Unknown column 'restaurantes.name' in 'where clause': SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`name` = 'Botequin' LIMIT 1
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:33:01', '2015-12-17 22:33:01', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:33:01', '2015-12-17 22:33:01', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:33:01', '2015-12-17 22:33:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:33:01', '2015-12-17 22:33:01', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (62.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:33:39', '2015-12-17 22:33:39', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:33:39', '2015-12-17 22:33:39', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:33:39', '2015-12-17 22:33:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:33:39', '2015-12-17 22:33:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (60.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:34:33', '2015-12-17 22:34:33', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:34:33', '2015-12-17 22:34:33', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:34:33', '2015-12-17 22:34:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:34:33', '2015-12-17 22:34:33', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (59.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:35:52', '2015-12-17 22:35:52', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:35:52', '2015-12-17 22:35:52', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:35:52', '2015-12-17 22:35:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:35:52', '2015-12-17 22:35:52', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (53.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:37:41', '2015-12-17 22:37:41', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:37:41', '2015-12-17 22:37:41', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:37:41', '2015-12-17 22:37:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:37:41', '2015-12-17 22:37:41', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (53.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:38:12', '2015-12-17 22:38:12', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:38:12', '2015-12-17 22:38:12', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:38:12', '2015-12-17 22:38:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:38:12', '2015-12-17 22:38:12', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (59.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:39:41', '2015-12-17 22:39:41', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:39:41', '2015-12-17 22:39:41', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:39:41', '2015-12-17 22:39:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:39:41', '2015-12-17 22:39:41', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (42.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:45:26', '2015-12-17 22:45:26', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:45:26', '2015-12-17 22:45:26', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:45:26', '2015-12-17 22:45:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:45:26', '2015-12-17 22:45:26', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (28.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:46:56', '2015-12-17 22:46:56', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:46:56', '2015-12-17 22:46:56', 273585968)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:46:56', '2015-12-17 22:46:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:46:56', '2015-12-17 22:46:56', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (2.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:47:15', '2015-12-17 22:47:15', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:47:15', '2015-12-17 22:47:15', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:47:15', '2015-12-17 22:47:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:47:15', '2015-12-17 22:47:15', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (24.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (260.9ms)[0m  [1mDROP DATABASE IF EXISTS `vota_prato_test`[0m
+  [1m[35m (0.2ms)[0m  CREATE DATABASE `vota_prato_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (68.4ms)[0m  [1mCREATE TABLE `clientes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `idade` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (65.6ms)[0m  CREATE TABLE `comentarios` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `comentavel_id` int(11), `comentavel_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (107.7ms)[0m  [1mCREATE  INDEX `index_comentarios_on_comentavel_id` USING btree ON `comentarios` (`comentavel_id`) [0m
+  [1m[35m (107.4ms)[0m  CREATE  INDEX `index_comentarios_on_comentavel_type` USING btree ON `comentarios` (`comentavel_type`) 
+  [1m[36m (65.7ms)[0m  [1mCREATE TABLE `pratos` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (65.7ms)[0m  CREATE TABLE `pratos_restaurantes` (`prato_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB
+  [1m[36m (107.6ms)[0m  [1mCREATE  INDEX `fk_rails_295555769c` USING btree ON `pratos_restaurantes` (`prato_id`) [0m
+  [1m[35m (99.5ms)[0m  CREATE  INDEX `fk_rails_7987cd3df4` USING btree ON `pratos_restaurantes` (`restaurante_id`) 
+  [1m[36m (65.5ms)[0m  [1mCREATE TABLE `qualificacoes` (`id` int(11) auto_increment PRIMARY KEY, `nota` float(24), `valor_gasto` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `cliente_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (107.5ms)[0m  CREATE  INDEX `fk_rails_5b62f7ef27` USING btree ON `qualificacoes` (`cliente_id`) 
+  [1m[36m (107.3ms)[0m  [1mCREATE  INDEX `fk_rails_081869fcbc` USING btree ON `qualificacoes` (`restaurante_id`) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE `receitas` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `prato_id` int(11)) ENGINE=InnoDB
+  [1m[36m (65.7ms)[0m  [1mCREATE TABLE `restaurantes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `especialidade` varchar(40), `foto_file_name` varchar(255), `foto_content_type` varchar(255), `foto_file_size` int(11), `foto_updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (166.4ms)[0m  ALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_295555769c`
+FOREIGN KEY (`prato_id`)
+  REFERENCES `pratos` (`id`)
+
+  [1m[36m (207.7ms)[0m  [1mALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_7987cd3df4`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (190.7ms)[0m  ALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_5b62f7ef27`
+FOREIGN KEY (`cliente_id`)
+  REFERENCES `clientes` (`id`)
+
+  [1m[36m (449.2ms)[0m  [1mALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_081869fcbc`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (94.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (140.8ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (32.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151020145847')[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003220255')
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003223301')[0m
+  [1m[35m (32.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151006190727')
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151002040129')[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004212020')
+  [1m[36m (33.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151016160613')[0m
+  [1m[35m (32.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003214708')
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151004212430')[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004211136')
+  [1m[36m (33.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003221037')[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151002040923')
+  [1m[36m (33.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151006212402')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `qualificacoes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `receitas`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `restaurantes`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:48:25', '2015-12-17 22:48:25', 500271007)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:48:25', '2015-12-17 22:48:25', 273585968)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `clientes`[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `comentarios`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:48:25', '2015-12-17 22:48:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:48:25', '2015-12-17 22:48:25', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `pratos`[0m
+  [1m[35m (31.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:54:30', '2015-12-17 22:54:30', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:54:30', '2015-12-17 22:54:30', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:54:30', '2015-12-17 22:54:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:54:30', '2015-12-17 22:54:30', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (43.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:55:33', '2015-12-17 22:55:33', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:55:33', '2015-12-17 22:55:33', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:55:33', '2015-12-17 22:55:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:55:33', '2015-12-17 22:55:33', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (29.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 22:56:33', '2015-12-17 22:56:33', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 22:56:33', '2015-12-17 22:56:33', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:56:33', '2015-12-17 22:56:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 22:56:33', '2015-12-17 22:56:33', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (28.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:04:49', '2015-12-17 23:04:49', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:04:49', '2015-12-17 23:04:49', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:04:49', '2015-12-17 23:04:49', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:04:49', '2015-12-17 23:04:49', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (43.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:05:23', '2015-12-17 23:05:23', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:05:23', '2015-12-17 23:05:23', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:05:23', '2015-12-17 23:05:23', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:05:23', '2015-12-17 23:05:23', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (27.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:05:57', '2015-12-17 23:05:57', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:05:57', '2015-12-17 23:05:57', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:05:57', '2015-12-17 23:05:57', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:05:57', '2015-12-17 23:05:57', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (29.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:06:24', '2015-12-17 23:06:24', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:06:24', '2015-12-17 23:06:24', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:06:24', '2015-12-17 23:06:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:06:24', '2015-12-17 23:06:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (40.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:22:32', '2015-12-17 23:22:32', 500271007)
+  [1m[36mFixture Insert (1.5ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:22:32', '2015-12-17 23:22:32', 273585968)[0m
+  [1m[35mFixture Delete (7.9ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:22:32', '2015-12-17 23:22:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:22:32', '2015-12-17 23:22:32', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (25.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (3.6ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:25:38', '2015-12-17 23:25:38', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:25:38', '2015-12-17 23:25:38', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:25:38', '2015-12-17 23:25:38', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:25:38', '2015-12-17 23:25:38', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (24.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:33:27', '2015-12-17 23:33:27', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:33:27', '2015-12-17 23:33:27', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:33:27', '2015-12-17 23:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:33:27', '2015-12-17 23:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (62.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:33:51', '2015-12-17 23:33:51', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:33:51', '2015-12-17 23:33:51', 273585968)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:33:51', '2015-12-17 23:33:51', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:33:51', '2015-12-17 23:33:51', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (41.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-17 23:34:07', '2015-12-17 23:34:07', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-17 23:34:07', '2015-12-17 23:34:07', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:34:07', '2015-12-17 23:34:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-17 23:34:07', '2015-12-17 23:34:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (27.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (2.3ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 00:27:59', '2015-12-18 00:27:59', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 00:27:59', '2015-12-18 00:27:59', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:27:59', '2015-12-18 00:27:59', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:27:59', '2015-12-18 00:27:59', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (40.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 00:29:30', '2015-12-18 00:29:30', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 00:29:30', '2015-12-18 00:29:30', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:29:30', '2015-12-18 00:29:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:29:30', '2015-12-18 00:29:30', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (27.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 00:30:00', '2015-12-18 00:30:00', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 00:30:00', '2015-12-18 00:30:00', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:30:00', '2015-12-18 00:30:00', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 00:30:00', '2015-12-18 00:30:00', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (36.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (2.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (2.0ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (4.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 01:51:59', '2015-12-18 01:51:59', 500271007)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 01:51:59', '2015-12-18 01:51:59', 273585968)[0m
+  [1m[35mFixture Delete (3.8ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (1.6ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (4.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:51:59', '2015-12-18 01:51:59', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:51:59', '2015-12-18 01:51:59', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (75.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 01:55:46', '2015-12-18 01:55:46', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 01:55:46', '2015-12-18 01:55:46', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:55:46', '2015-12-18 01:55:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:55:46', '2015-12-18 01:55:46', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (32.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 01:56:53', '2015-12-18 01:56:53', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 01:56:53', '2015-12-18 01:56:53', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:56:53', '2015-12-18 01:56:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:56:53', '2015-12-18 01:56:53', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (26.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1[0m
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1[0m
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 01:58:13', '2015-12-18 01:58:13', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 01:58:13', '2015-12-18 01:58:13', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:58:13', '2015-12-18 01:58:13', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:58:13', '2015-12-18 01:58:13', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (24.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `qualificacoes`[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `receitas`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `restaurantes`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fasano', 'Rua Vergueiro', 'Massa', '2015-12-18 01:58:38', '2015-12-18 01:58:38', 500271007)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`, `id`) VALUES ('Fogo de Chao', 'Avenida dos Bandeirantes', 'Massa', '2015-12-18 01:58:38', '2015-12-18 01:58:38', 273585968)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `clientes`
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:58:38', '2015-12-18 01:58:38', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `comentarios` (`conteudo`, `comentavel_id`, `comentavel_type`, `created_at`, `updated_at`, `id`) VALUES ('MyText', 1, 'MyString', '2015-12-18 01:58:38', '2015-12-18 01:58:38', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `pratos`
+  [1m[36m (22.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante
+----------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Fasano"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Fasano' LIMIT 1
+Redirected to http://test.host/restaurantes/500271007
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------------
+RestaurantesControllerTest: test_procura_restaurante_nao_encontra
+-----------------------------------------------------------------
+Processing by RestaurantesController#busca as HTML
+  Parameters: {"nome"=>"Botequin"}
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Botequin' LIMIT 1
+Redirected to http://test.host/restaurantes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+RestauranteTest: test_restaurante
+---------------------------------
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 500271007 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY 'Fasano' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Vergueiro' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK

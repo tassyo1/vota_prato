@@ -4,7 +4,7 @@ class RestauranteTest < ActiveSupport::TestCase
   fixtures :restaurantes
 
   def test_restaurante
-  	assert true
+  	#assert true
     
   	restaurante = Restaurante.new(
   		nome: restaurantes(:fasano).nome,
@@ -12,11 +12,16 @@ class RestauranteTest < ActiveSupport::TestCase
   		especialidade: restaurantes(:fasano).especialidade)
 
   	msg = "restaurante não foi salvo. "+ "errors: #{restaurante.errors.inspect}"
+  	b = restaurante.save
+    
+    if b
+      assert(b, "Ronaldo...") 
+    else
+      assert(b, "Marina...") 
+    end  
 
-  	assert(restaurante.save, msg)
-
-  	restaurante_fasano_copia = Restaurante.find(restaurante.id)
-
-  	assert_equal restaurante.nome, restaurante_fasano_copia.nome
+  	restaurante_fasano_copia = Restaurante.find_by nome: restaurante.nome
+    msg2= "restaurante já cadastrado"+ "errors: #{restaurante.errors.inspect}"  	
+    assert_equal(restaurante.nome, restaurante_fasano_copia.nome,msg2)
   end
 end
