@@ -1,0 +1,24 @@
+
+<h1> Lista de pratos</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Restaurante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pratos.each do |pratos| %>
+      <tr>
+        <td><%= pratos.nome %></td>
+        <td><%= pratos.descricao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

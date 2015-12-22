@@ -1,5 +1,6 @@
 class Prato < ActiveRecord::Base
 	validates_presence_of :nome, :message => " - deve ser preenchido"
+	validates_presence_of :descricao, :message => "- deve ser preenchido"
 	validates_uniqueness_of :nome,  :message => " - nome já cadastrado"
 
 	has_and_belongs_to_many :restaurantes
@@ -11,4 +12,10 @@ class Prato < ActiveRecord::Base
 		errors.add("restaurantes", 
 			"deve haver ao menos um restaurante") if restaurantes.empty?
 	end
+
+	has_attached_file :foto, style: {
+		medium:"300x300>", thumb: "100x100>"
+	}
+
+	validates_attachment_content_type :foto, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end
