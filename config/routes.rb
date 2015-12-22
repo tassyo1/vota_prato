@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   match 'pratos' => 'pratos#index', via: 'get'
   #match 'pratos', controller: 'pratos', action: 'index', via: 'get' ----outra sintaxe
 
+  match 'receitas/:prato' => 'receitas#show', via: 'get'
+
 
 end

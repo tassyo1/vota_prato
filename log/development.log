@@ -21803,3 +21803,1575 @@ Processing by PratosController#index as HTML
   Rendered pratos/index.html.erb within layouts/application (5.3ms)
   Rendered layouts/_menu_principal.html.erb (0.6ms)
 Completed 200 OK in 134ms (Views: 133.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-12-22 13:46:04 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 129.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 13:46:06 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 96.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-12-22 14:28:27 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 14:28:29 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-12-22 14:55:24 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 99ms (Views: 98.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes/1" for 127.0.0.1 at 2015-12-22 14:55:26 -0200
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQualificacao Load (0.5ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 1 LIMIT 1
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mComentario Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 1 AND `comentarios`.`comentavel_type` = 'Qualificacao' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (3.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (4.8ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 161ms (Views: 157.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-12-22 14:55:28 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2015-12-22 14:55:30 -0200
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  Rendered clientes/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 138ms (Views: 136.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes/1/edit" for 127.0.0.1 at 2015-12-22 14:55:32 -0200
+Processing by ClientesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  Rendered clientes/_form.html.erb (14.7ms)
+  Rendered clientes/edit.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 130.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 14:55:38 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 141ms (Views: 139.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 14:55:39 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.4ms)
+  Rendered comentarios/_comentarios.html.erb (2.5ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.2ms)
+  Rendered restaurantes/show.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 128.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qualificacoes/new?restaurante=2" for 127.0.0.1 at 2015-12-22 14:55:48 -0200
+Processing by QualificacoesController#new as HTML
+  Parameters: {"restaurante"=>"2"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`  ORDER BY `clientes`.`nome` ASC
+  Rendered qualificacoes/_form.html.erb (2.2ms)
+  Rendered qualificacoes/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-12-22 14:58:03 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes/1" for 127.0.0.1 at 2015-12-22 14:58:05 -0200
+Processing by QualificacoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQualificacao Load (0.1ms)[0m  SELECT  `qualificacoes`.* FROM `qualificacoes` WHERE `qualificacoes`.`id` = 1 LIMIT 1
+  [1m[36mCliente Load (0.9ms)[0m  [1mSELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 1 AND `comentarios`.`comentavel_type` = 'Qualificacao' LIMIT 1[0m
+  Rendered comentarios/_comentarios.html.erb (0.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.1ms)
+  Rendered qualificacoes/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 132ms (Views: 129.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:05:10 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 128ms (Views: 127.8ms | ActiveRecord: 0.1ms)
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mPrato Load (0.3ms)[0m  [1mSELECT  `pratos`.* FROM `pratos` WHERE `pratos`.`id` = 1 LIMIT 1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes` INNER JOIN `pratos_restaurantes` ON `restaurantes`.`id` = `pratos_restaurantes`.`restaurante_id` WHERE `pratos_restaurantes`.`prato_id` = 1
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 15:21:36 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 15:21:37 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.5ms)
+  Rendered comentarios/_comentarios.html.erb (1.8ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.3ms)
+  Rendered restaurantes/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 15:21:45 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 15:21:48 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.3ms)
+  Rendered comentarios/_comentarios.html.erb (1.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (0.9ms)
+  Rendered restaurantes/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-12-22 15:21:56 -0200
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:23:11 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 139ms (Views: 138.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 15:23:56 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 170ms (Views: 169.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 15:23:59 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.5ms)
+  Rendered comentarios/_comentarios.html.erb (2.1ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.0ms)
+  Rendered restaurantes/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 119ms (Views: 117.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:24:01 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2015-12-22 15:24:14 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 106.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2015-12-22 15:24:19 -0200
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.1ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.1ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 1 LIMIT 1
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 96.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:24:20 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:28:04 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 126ms (Views: 125.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:31:25 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `foto' for #<Prato::ActiveRecord_Relation:0x007fd052272bd8>):
+    16:       <tr>
+    17:         <td><%= pratos.nome %></td>
+    18:         <td><%= pratos.descricao %></td>
+    19:         <td><%= image_tag @pratos.foto.url(:thumb) %></td>
+    20:       </tr>
+    21:     <% end %>
+    22:   </tbody>
+  app/views/pratos/index.html.erb:19:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.5ms)
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 1 LIMIT 1[0m
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:37:23 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `foto' for #<Prato::ActiveRecord_Relation:0x007fd05215d3d8>):
+    16:       <tr>
+    17:         <td><%= pratos.nome %></td>
+    18:         <td><%= pratos.descricao %></td>
+    19:         <td><%= image_tag @pratos.foto.url(:thumb) %></td>
+    20:       </tr>
+    21:     <% end %>
+    22:   </tbody>
+  app/views/pratos/index.html.erb:19:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.6ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:37:28 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `foto' for #<Prato::ActiveRecord_Relation:0x007fd051017600>):
+    16:       <tr>
+    17:         <td><%= pratos.nome %></td>
+    18:         <td><%= pratos.descricao %></td>
+    19:         <td><%= image_tag @pratos.foto.url(:thumb) %></td>
+    20:       </tr>
+    21:     <% end %>
+    22:   </tbody>
+  app/views/pratos/index.html.erb:19:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354108640'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:38:35 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.3ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_menu_principal.html.erb (1.1ms)
+Completed 200 OK in 141ms (Views: 134.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:39:33 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `foto' for #<Prato::ActiveRecord_Relation:0x007fd051b134c8>):
+    16:       <tr>
+    17:         <td><%= pratos.nome %></td>
+    18:         <td><%= pratos.descricao %></td>
+    19:         <td><%= image_tag @pratos.foto.url(:thumb) %></td>
+    20:       </tr>
+    21:     <% end %>
+    22:   </tbody>
+  app/views/pratos/index.html.erb:19:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266350241580'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266350241580'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.2ms)
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:41:52 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_menu_principal.html.erb (1.5ms)
+Completed 200 OK in 122ms (Views: 121.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 15:41:52 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:42:16 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_menu_principal.html.erb (1.1ms)
+Completed 200 OK in 133ms (Views: 131.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 15:42:16 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.9ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 15:43:59 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 145ms (Views: 135.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2015-12-22 15:44:01 -0200
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/_form.html.erb (1.4ms)
+  Rendered restaurantes/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_menu_principal.html.erb (1.0ms)
+Completed 200 OK in 159ms (Views: 158.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 15:44:09 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.6ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.8ms)
+  Rendered comentarios/_comentarios.html.erb (8.5ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.2ms)
+  Rendered restaurantes/show.html.erb within layouts/application (41.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 144ms (Views: 139.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2015-12-22 15:44:15 -0200
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/_form.html.erb (1.1ms)
+  Rendered restaurantes/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 117.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:44:20 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 15:44:20 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 15:47:23 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas"}):
+    24: 
+    25: <br>
+    26: 
+    27:  <%= link_to "Receita", controller: "receitas", action: "show" %>
+  app/views/pratos/index.html.erb:27:in `_app_views_pratos_index_html_erb___460034112975723577_70266353014920'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.0ms)
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT  `pratos`.* FROM `pratos` WHERE `pratos`.`id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2015-12-22 16:06:34 -0200
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 241ms (Views: 229.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/receitas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:06:34 -0200
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:06:37 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.5ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:06:37 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.5ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 16:07:26 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.7ms)
+  Rendered comentarios/_comentarios.html.erb (6.9ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.0ms)
+  Rendered restaurantes/show.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 139ms (Views: 136.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:10:19 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (23.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:10:20 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:10:29 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:11:02 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.5ms)
+
+
+Started GET "/restaurantes/2" for 127.0.0.1 at 2015-12-22 16:11:04 -0200
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 2
+  [1m[36mComentario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1[0m
+  [1m[35mComentario Load (0.1ms)[0m  SELECT `comentarios`.* FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 2 AND `comentarios`.`comentavel_type` = 'Restaurante'
+  Rendered comentarios/_comentario.html.erb (0.8ms)
+  Rendered comentarios/_comentarios.html.erb (9.7ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.2ms)
+  Rendered restaurantes/show.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 172ms (Views: 155.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:11:05 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266349276860'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:11:06 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266354180700'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.3ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:13:05 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>1}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p.id %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266344187480'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266344187480'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.9ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:13:06 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>1}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p.id %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266344187480'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266344187480'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.9ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:14:00 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.4ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 127.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:14:01 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.4ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:14:13 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_menu_principal.html.erb (1.2ms)
+Completed 200 OK in 133ms (Views: 132.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:14:14 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:14:15 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 124ms (Views: 115.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:14:51 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[35mReceita Load (0.1ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 110.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:14:53 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:15:08 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.1ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 132ms (Views: 131.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:15:08 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.9ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:16:36 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:17:21 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"ronaldo"=>"1"}
+  Rendered receitas/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu_principal.html.erb (1.1ms)
+Completed 200 OK in 115ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:17:24 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_70266366648100'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_70266366648100'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (22.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:17:24 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"receitas", :prato=>#<Prato id: 1, nome: "Big Mac", created_at: nil, updated_at: nil, foto_file_name: nil, foto_content_type: nil, foto_file_size: nil, foto_updated_at: nil, descricao: "Dois hambúrgueres, alface, queijo e molho especial">}):
+    17:         <td><%= p.nome %></td>
+    18:         <td><%= p.descricao %></td>
+    19:         <td><%= image_tag p.foto.url(:thumb) %></td>
+    20:         <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+    21:       </tr>
+    22:     <% end %>
+    23:   </tbody>
+  app/views/pratos/index.html.erb:20:in `block in _app_views_pratos_index_html_erb___460034112975723577_32000080'
+  app/views/pratos/index.html.erb:15:in `_app_views_pratos_index_html_erb___460034112975723577_32000080'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:17:48 -0200
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (1.7ms)[0m  SELECT `pratos`.* FROM `pratos`
+  Rendered pratos/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 116.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:17:48 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.2ms)
+
+
+Started GET "/receitas/1.nome" for 127.0.0.1 at 2015-12-22 16:17:50 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 160ms (Views: 151.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/receitas/1.nome" for 127.0.0.1 at 2015-12-22 16:18:26 -0200
+Processing by ReceitasController#show as 
+  Parameters: {"prato"=>"1"}
+  [1m[35mReceita Load (0.1ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu_principal.html.erb (2.0ms)
+Completed 200 OK in 160ms (Views: 151.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/receitas/1.nome" for 127.0.0.1 at 2015-12-22 16:18:30 -0200
+Processing by ReceitasController#show as 
+  Parameters: {"prato"=>"1"}
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 167ms (Views: 166.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/receitas/1.nome" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+Processing by ReceitasController#show as 
+  Parameters: {"prato"=>"1"}
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (1.3ms)
+Completed 200 OK in 130ms (Views: 128.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-f3cfe3c8e884713b27a019f503a2c92f9886e11506e544adab5076799d78f47e.css?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:35 -0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/prato.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/pratos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/receitas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-22 16:18:36 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-22 16:18:37 -0200
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 231ms (Views: 230.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:18:39 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 219ms (Views: 211.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:18:39 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.2ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2015-12-22 16:18:43 -0200
+Processing by ReceitasController#show as HTML
+  Parameters: {"prato"=>"1"}
+  [1m[35mReceita Load (0.1ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (1.2ms)
+Completed 200 OK in 126ms (Views: 119.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2015-12-22 16:19:01 -0200
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  Rendered pratos/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 119.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fotos/thumb/missing.png" for 127.0.0.1 at 2015-12-22 16:19:01 -0200
+
+ActionController::RoutingError (No route matches [GET] "/fotos/thumb/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+  passenger (5.0.23) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.0ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tassyo1/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.3ms)
