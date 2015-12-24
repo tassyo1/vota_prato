@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<h1>
+	<%= @prato.nome %>
+</h1>
+<p>
+	<%= image_tag @prato.foto.url(:medium) %>
+</p>
 
-</body>
-</html>
+<p>
+	<%= @receitas.conteudo %>
+</p>
