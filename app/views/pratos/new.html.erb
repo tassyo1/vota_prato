@@ -1,4 +1,4 @@
-<%= form_for @pratos do |f| %>
+<%= form_for @prato , html: {multipart: true} do |f| %>
 	<!--<div class="form-group">
 		<%= f.label :nome %>
 		
@@ -31,8 +31,11 @@
   </div>
   
   <div class="form-group">
-    <%= f.label "Receita" %>
-    <%=f.text_field :nome , class: "form-control", placeholder: "nome do prato"%>
+
+  <%= f.fields_for :receita do |r| %>
+    <%= r.label "Receita" %>
+    <%= r.text_area :conteudo , class: "form-control", placeholder: "ingredientes - modo de preparo", size: "100x20"%>
+   <% end %> 
   </div>
   
   <%= f.submit "Salvar", class: "btn btn-default" %>
