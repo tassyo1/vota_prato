@@ -1,10 +1,10 @@
 class Prato < ActiveRecord::Base
-	validates_presence_of :nome, :message => " - deve ser preenchido"
-	validates_presence_of :descricao, :message => "- deve ser preenchido"
-	validates_uniqueness_of :nome,  :message => " - nome já cadastrado"
+	validates :descricao, presence: true
+  validates :nome, presence: true
+  validates_uniqueness_of :nome,  :message => " - nome já cadastrado"
 
 	#has_and_belongs_to_many :restaurantes
-	has_one :receita , autosave: :true
+	has_one :receita , autosave: true
 	accepts_nested_attributes_for :receita
 
 	'''validate :validate_presence_of_more_than_one_restaurante

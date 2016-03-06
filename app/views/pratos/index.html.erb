@@ -17,7 +17,11 @@
         <td><%= p.nome %></td>
         <td><%= p.descricao %></td>
         <!--<td><%= image_tag p.foto.url(:thumb) %></td> -->
-        <td><%= link_to "Receita", controller: "receitas", action: "show", prato: p %></td>
+        <% if p.receita.blank? %>
+          <td><%= link_to "Adicionar receita", controller: "receitas", action: "new", prato_id: p %></td>
+       <% else  %>
+          <td><%= link_to "Ver Receita", controller: "receitas", action: "show", id: p.receita %></td> 
+       <% end %>
       </tr>
     <% end %>
   </tbody>

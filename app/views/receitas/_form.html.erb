@@ -1,0 +1,7 @@
+<%= form_for @receita do |f| %>
+  <div class="form-group">
+      <%= f.label "Receita" %>
+      <%= f.text_area :conteudo, class: "form-control", placeholder: "ingredientes - modo de preparo :(", size: "100x20"%>
+      <%= f.submit "Salvar" %>
+  </div>
+<% end %>

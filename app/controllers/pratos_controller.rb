@@ -5,22 +5,21 @@ class PratosController < ApplicationController
 
 	def new
 		@prato = Prato.new
-		@prato.receita = Receita.new
 	end
 
 	def create
 		@prato = Prato.new(pratos_params)
-
-		
-
-		if @prato.save
-			redirect_to(controller: "receitas", action: "show", prato: @prato)
+		if @prato.save 
+     # redirect_to(action: "show", id: @prato)
+       redirect_to(action: "index")
 		else
 			render action: "new"
-		end		
+    end
 	end
 
+  private
 	def pratos_params
-		params.require(:prato).permit(:nome, :descricao, :receita)
+		params.require(:prato).permit(:nome, :descricao)
 	end
+
 end

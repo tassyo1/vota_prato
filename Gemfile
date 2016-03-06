@@ -28,6 +28,7 @@ gem 'paperclip'
 
 gem 'test-unit'
 
+gem 'pg'
  # CSS
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

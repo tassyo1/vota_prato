@@ -19,4 +19,8 @@ module ApplicationHelper
 	def menu_principal(controllers)
 		render partial: "layouts/menu_principal", locals: {opcoes: controllers}
 	end
+
+	def receita(prato)
+		render partial: "receitas/form", locals: {prato: prato}
+	end
 end

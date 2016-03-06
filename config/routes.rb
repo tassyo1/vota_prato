@@ -1,25 +1,14 @@
 Rails.application.routes.draw do
+  root  'pages#index'
   resources :comentarios
-  
-  VotaPrato::Application.routes.draw do
-    resources :comentarios
-  end
-
   resources :qualificacoes
   resources :clientes
   resources :restaurantes
-  match 'busca' => 'restaurantes#busca', via: 'get' #rota e action criadas apenas para teste de controller restaurante
+  resources :receitas
+  resources :pratos
+ 
 
-  root to: 'pages#index'
-
-  match 'rack',
+ match 'rack',
 	 :to => proc{|env| [200, {"Content-Type" => "text/html"}, ["App Rack numa rota Rails"]]}, via:'get'
-
-  match 'pratos' => 'pratos#index', via: 'get'
-  #match 'pratos', controller: 'pratos', action: 'index', via: 'get' ----outra sintaxe
-  match 'receitas/:prato' => 'receitas#show', via: 'get'
-  get 'pratos/new', to: 'pratos#new'
-  post 'pratos', to: 'pratos#create'
-
 
 end
