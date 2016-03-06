@@ -1,5 +1,6 @@
 class Receita < ActiveRecord::Base
-  validates :conteudo, presence: true 
+  validates :ingredientes, presence: true 
+  validates :modo_preparo, presence: true
   validates :prato_id, presence: true 
 	validates_associated :prato
 

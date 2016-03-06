@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222151731) do
+ActiveRecord::Schema.define(version: 20160306173620) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome",       limit: 80
@@ -63,10 +63,11 @@ ActiveRecord::Schema.define(version: 20151222151731) do
   add_index "qualificacoes", ["restaurante_id"], name: "fk_rails_081869fcbc", using: :btree
 
   create_table "receitas", force: :cascade do |t|
-    t.text     "conteudo",   limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "prato_id",   limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "prato_id",     limit: 4
+    t.text     "ingredientes", limit: 65535
+    t.text     "modo_preparo", limit: 65535
   end
 
   create_table "restaurantes", force: :cascade do |t|

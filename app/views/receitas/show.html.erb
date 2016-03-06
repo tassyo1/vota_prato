@@ -1,1 +1,11 @@
+<h3>Ingredientes</h3>
 
+<%= @receita.ingredientes %>
+<br>
+<h3>Modo de Preparo</h3>
+
+<%= @receita.modo_preparo %>
+<br>
+<br>
+<%= link_to "Voltar", controller: "pratos" %>
+<%= link_to "Editar", action: "edit", id: @receita %>

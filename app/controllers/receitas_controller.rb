@@ -11,22 +11,25 @@ class ReceitasController < ApplicationController
 	    format.xml  { render xml: @receita }
 	  end
 	end
-'''
+
   def create
-    @receita = @prato.receita
-    
-    if @receita.save
-      redirect_to(controller: "receitas", action: "show", prato: @prato)
-    else
-      @prato.destroy
- #   redirect_to controller: "pratos", action: "new"
+    @receita = Receita.new(receitas_params)
+    respond_to do |format|
+      if @receita.save
+        format.html { redirect_to(@receita) }
+      else
+        format.html { render action: 'new' } 
+      end
     end
   end
-'''
+ 
+  def edit
+    @receita = Receita.find(params[:id])
+  end
 
 
   private
   def receitas_params
-    params.require(:receita).permit(:conteudo,:prato_id)
+    params.require(:receita).permit(:modo_preparo,:ingredientes,:prato_id)
   end
 end

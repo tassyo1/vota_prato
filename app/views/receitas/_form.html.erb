@@ -1,7 +1,18 @@
-<%= form_for @receita do |f| %>
+<div class= "row">
+<div class= "col-md-6 col-md-offser-3">
+ <%= form_for @receita do |f| %>
   <div class="form-group">
-      <%= f.label "Receita" %>
-      <%= f.text_area :conteudo, class: "form-control", placeholder: "ingredientes - modo de preparo :(", size: "100x20"%>
+      <%= f.label "Ingredientes" %>
+      <%= f.text_area :ingredientes, class: "form-control", placeholder: "Lista de ingredientes ", size: "70x10"%>
+<br>
+      <%= f.label "Modo de Preparo" %>
+      <%= f.text_area :modo_preparo, class: "form-control", placeholder: "Modo de preparo dessa receita", size: "70x10" %>
+     
+      <%= f.hidden_field :prato_id %>
+     
       <%= f.submit "Salvar" %>
-  </div>
-<% end %>
+ </div>
+<% end %> 
+</div>
+</div>
+
