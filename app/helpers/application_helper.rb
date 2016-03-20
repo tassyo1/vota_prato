@@ -18,6 +18,7 @@ module ApplicationHelper
 
 	def menu_principal(controllers)
 		render partial: "layouts/menu_principal", locals: {opcoes: controllers}
+   #<%= menu_principal %w(restaurantes clientes qualificacoes pratos)	 %>
 	end
 
 	def receita(prato)

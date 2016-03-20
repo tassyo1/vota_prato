@@ -39195,3 +39195,1005 @@ Processing by ReceitasController#show as HTML
   Rendered receitas/show.html.erb within layouts/application (1.0ms)
   Rendered layouts/_menu_principal.html.erb (0.7ms)
 Completed 200 OK in 143ms (Views: 141.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:13:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (6.3ms)
+Completed 200 OK in 587ms (Views: 572.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2393e8947dd79bcaae3c063cc11833dbce1eed6f0f634b662876522f14941a65.css?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/prato.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/pratos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/receitas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-20 01:13:50 -0300
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:13:56 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.4ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.3ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.3ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (69.0ms)
+  Rendered layouts/_menu_principal.html.erb (1.0ms)
+Completed 200 OK in 232ms (Views: 199.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 01:13:59 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.4ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 140.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:14:05 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 147.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:14:13 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.4ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 164ms (Views: 136.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:14:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (1.3ms)
+Completed 200 OK in 284ms (Views: 277.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:15:00 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_menu_principal.html.erb (1.1ms)
+Completed 200 OK in 148ms (Views: 137.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:15:50 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 143.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 01:16:16 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.4ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 152ms (Views: 141.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:16:17 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:35:57 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_menu_principal.html.erb (23.5ms)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined local variable or method `opcoes' for #<#<Class:0x007f8909128740>:0x007f890911edf8>):
+     6: 			<div id="navbar">
+     7: 
+     8: 				<ul class="nav navbar-nav navbar-left">
+     9:           <!--  <% opcoes.each do | controller_name | %> -->
+    10: 					<li>
+    11: 						<%= link_to "Restaurantes", restaurante_path %>
+    12: 					</li>
+  app/views/layouts/_menu_principal.html.erb:9:in `_app_views_layouts__menu_principal_html_erb___3530539098919088146_70113282612840'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___1984525353052476173_70113269639060'
+  app/controllers/restaurantes_controller.rb:8:in `index'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.7ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:35:58 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_menu_principal.html.erb (8.3ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `opcoes' for #<#<Class:0x007f8909128740>:0x00000004479bf0>):
+     6: 			<div id="navbar">
+     7: 
+     8: 				<ul class="nav navbar-nav navbar-left">
+     9:           <!--  <% opcoes.each do | controller_name | %> -->
+    10: 					<li>
+    11: 						<%= link_to "Restaurantes", restaurante_path %>
+    12: 					</li>
+  app/views/layouts/_menu_principal.html.erb:9:in `_app_views_layouts__menu_principal_html_erb___3530539098919088146_70113282612840'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___1984525353052476173_70113269639060'
+  app/controllers/restaurantes_controller.rb:8:in `index'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (21.4ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:37:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_menu_principal.html.erb (2.3ms)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"restaurantes"} missing required keys: [:id]):
+     5:     </div>
+     6:     <div id="navbar">
+     7:       <ul class="nav navbar-nav navbar-left">
+     8:         <li><%= link_to "Restaurantes", restaurante_path %>	</li>
+     9:       </ul>	
+    10: 			</div>
+    11: 	</div>
+  app/views/layouts/_menu_principal.html.erb:8:in `_app_views_layouts__menu_principal_html_erb___539957014703710354_70278937275240'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___4061458116216196236_34807000'
+  app/controllers/restaurantes_controller.rb:8:in `index'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (21.7ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:38:29 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.1ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:38:34 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 131.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:51:37 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 140ms (Views: 139.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 01:51:40 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.2ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 135.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:51:41 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 141.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:51:41 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.2ms)
+Completed 200 OK in 168ms (Views: 159.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:51:42 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 143ms (Views: 141.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:51:43 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 145.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:51:44 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 145.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2016-03-20 01:51:47 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/_form.html.erb (32.5ms)
+  Rendered restaurantes/new.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 195ms (Views: 185.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:51:54 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 140.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2016-03-20 01:51:57 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/_form.html.erb (1.0ms)
+  Rendered restaurantes/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 143.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 01:52:04 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2016-03-20 01:52:06 -0300
+Processing by ClientesController#new as HTML
+  Rendered clientes/_form.html.erb (60.5ms)
+  Rendered clientes/new.html.erb within layouts/application (62.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 224ms (Views: 218.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:52:07 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 146.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes/new" for 127.0.0.1 at 2016-03-20 01:52:10 -0300
+Processing by QualificacoesController#new as HTML
+  [1m[36mCliente Load (0.4ms)[0m  [1mSELECT `clientes`.* FROM `clientes`  ORDER BY `clientes`.`nome` ASC[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered qualificacoes/_form.html.erb (23.7ms)
+  Rendered qualificacoes/new.html.erb within layouts/application (40.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 188ms (Views: 179.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/qualificacoes/new" for 127.0.0.1 at 2016-03-20 01:53:57 -0300
+Processing by QualificacoesController#new as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`  ORDER BY `clientes`.`nome` ASC[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`nome` ASC
+  Rendered qualificacoes/_form.html.erb (6.0ms)
+  Rendered qualificacoes/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 157ms (Views: 155.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 01:54:01 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.7ms)
+Completed 200 OK in 147ms (Views: 145.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 01:54:02 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 138.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:54:03 -0300
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1[0m
+  Rendered pratos/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 01:54:05 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReceita Load (0.3ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 137.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/receitas/1/edit" for 127.0.0.1 at 2016-03-20 01:54:07 -0300
+Processing by ReceitasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::MissingTemplate (Missing template receitas/edit, application/edit with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/tassyosantana/Documentos/Projetos/Ruby/vota_prato/app/views"
+  * "/home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (33.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.4ms)
+
+
+Started GET "/receitas/1/edit" for 127.0.0.1 at 2016-03-20 01:54:07 -0300
+Processing by ReceitasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+ActionView::MissingTemplate (Missing template receitas/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/tassyosantana/Documentos/Projetos/Ruby/vota_prato/app/views"
+  * "/home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tassyosantana/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (19.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (22.5ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 01:54:10 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 145.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:54:12 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 147.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 01:54:13 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 01:55:56 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 147.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:55:58 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 01:56:00 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 144.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 01:56:01 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 02:02:10 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 130.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 02:02:15 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 02:02:16 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 02:02:17 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 139.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 02:02:19 -0300
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1mSELECT `clientes`.* FROM `clientes`[0m
+  Rendered clientes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 02:02:20 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 138.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:02:27 -0300
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1[0m
+  Rendered pratos/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 141.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pratos/new" for 127.0.0.1 at 2016-03-20 02:02:38 -0300
+Processing by PratosController#new as HTML
+  Rendered pratos/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_menu_principal.html.erb (5.2ms)
+Completed 200 OK in 139ms (Views: 138.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 02:02:46 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1
+  Rendered receitas/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 02:02:58 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 147.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2016-03-20 02:03:00 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered restaurantes/_form.html.erb (1.2ms)
+  Rendered restaurantes/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:04:15 -0300
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.1ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  [1m[35mReceita Load (0.1ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1[0m
+  Rendered pratos/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pratos/new" for 127.0.0.1 at 2016-03-20 02:04:18 -0300
+Processing by PratosController#new as HTML
+  Rendered pratos/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 02:25:10 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 146ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 02:25:12 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[35mQualificacao Load (0.2ms)[0m  SELECT `qualificacoes`.* FROM `qualificacoes`
+  Rendered qualificacoes/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 146.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:25:12 -0300
+Processing by PratosController#index as HTML
+  [1m[36mPrato Load (0.2ms)[0m  [1mSELECT `pratos`.* FROM `pratos`[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1[0m
+  Rendered pratos/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-03-20 02:25:13 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 126.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-20 02:25:14 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-03-20 02:25:15 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.1ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 150.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-03-20 02:25:16 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.2ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 145.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:25:17 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 141.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/receitas/new?prato_id=2" for 127.0.0.1 at 2016-03-20 02:26:24 -0300
+Processing by ReceitasController#new as HTML
+  Parameters: {"prato_id"=>"2"}
+  Rendered receitas/_form.html.erb (26.4ms)
+  Rendered receitas/new.html.erb within layouts/application (27.9ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 02:26:28 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 146.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:31:05 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.2ms)
+Completed 200 OK in 154ms (Views: 153.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 02:31:13 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 144.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:31:16 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.2ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 148.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/receitas/1" for 127.0.0.1 at 2016-03-20 02:31:49 -0300
+Processing by ReceitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReceita Load (0.2ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`id` = 1 LIMIT 1[0m
+  Rendered receitas/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pratos" for 127.0.0.1 at 2016-03-20 02:31:52 -0300
+Processing by PratosController#index as HTML
+  [1m[35mPrato Load (0.2ms)[0m  SELECT `pratos`.* FROM `pratos`
+  [1m[36mReceita Load (0.1ms)[0m  [1mSELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 1 LIMIT 1[0m
+  [1m[35mReceita Load (0.1ms)[0m  SELECT  `receitas`.* FROM `receitas` WHERE `receitas`.`prato_id` = 2 LIMIT 1
+  Rendered pratos/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.4ms)
