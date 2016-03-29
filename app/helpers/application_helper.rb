@@ -24,4 +24,9 @@ module ApplicationHelper
 	def receita(prato)
 		render partial: "receitas/form", locals: {prato: prato}
 	end
+
+  def exibe_erros(model)
+   render partial: "layouts/errors",
+     locals: {modelo: model}
+  end
 end

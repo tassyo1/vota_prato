@@ -16,7 +16,7 @@ class RestaurantesController < ApplicationController
 		@restaurante = Restaurante.find(params[:id])
 
 		respond_to do |format|
-			format.html
+			format.html 
 			format.json {render json: @restaurante}
 			format.xml {render xml: @restaurante}
 		end
@@ -39,11 +39,16 @@ class RestaurantesController < ApplicationController
 
 	def create
 		@restaurante = Restaurante.new(restaurante_params)
-		 if @restaurante.save
-			redirect_to(action: "show", id: @restaurante)
-		else
-			render action: "new"
-		end	
+
+    respond_to do |format|
+      if @restaurante.save
+        flash[:success]= "Restaurante foi criado com sucesso."
+        format.html {	redirect_to @restaurante }
+      else
+        flash[:danger]
+			  format.html {  render :new }
+      end	
+    end
 	end
 
 	def edit

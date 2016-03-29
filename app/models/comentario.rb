@@ -1,3 +1,4 @@
 class Comentario < ActiveRecord::Base
-	belongs_to :comentavel, polymorphic: true
+  validates :conteudo, length: { in: 3..20 }
+  belongs_to :comentavel, polymorphic: true
 end

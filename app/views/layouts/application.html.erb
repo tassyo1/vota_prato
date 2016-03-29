@@ -10,6 +10,11 @@
 <body>
 
 <%= render "layouts/menu_principal" %>
+
+<% flash.each do |message_type, message| %>
+   <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <div class="container">
   <%= yield %>	
 </div>
@@ -17,5 +22,7 @@
 <script>
 	<%= yield :js %>
 </script>
+
+
 </body>
 </html>
