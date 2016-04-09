@@ -4152,3 +4152,286 @@ RestauranteTest: test_restaurante
   [1m[35mSQL (0.1ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Graal', 'QueLuz', 'self-service', '2015-12-18 15:32:34', '2015-12-18 15:32:34')
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (37.0ms)[0m  ROLLBACK
+  [1m[36m (67.8ms)[0m  [1mDROP DATABASE IF EXISTS `vota_prato_test`[0m
+  [1m[35m (0.1ms)[0m  CREATE DATABASE `vota_prato_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (81.2ms)[0m  [1mCREATE TABLE `clientes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `idade` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (63.1ms)[0m  CREATE TABLE `comentarios` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `comentavel_id` int(11), `comentavel_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (191.5ms)[0m  [1mCREATE  INDEX `index_comentarios_on_comentavel_id` USING btree ON `comentarios` (`comentavel_id`) [0m
+  [1m[35m (149.0ms)[0m  CREATE  INDEX `index_comentarios_on_comentavel_type` USING btree ON `comentarios` (`comentavel_type`) 
+  [1m[36m (61.8ms)[0m  [1mCREATE TABLE `pratos` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `foto_file_name` varchar(255), `foto_content_type` varchar(255), `foto_file_size` int(11), `foto_updated_at` datetime, `descricao` varchar(80)) ENGINE=InnoDB[0m
+  [1m[35m (63.0ms)[0m  CREATE TABLE `pratos_restaurantes` (`prato_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB
+  [1m[36m (149.2ms)[0m  [1mCREATE  INDEX `fk_rails_295555769c` USING btree ON `pratos_restaurantes` (`prato_id`) [0m
+  [1m[35m (156.7ms)[0m  CREATE  INDEX `fk_rails_7987cd3df4` USING btree ON `pratos_restaurantes` (`restaurante_id`) 
+  [1m[36m (62.5ms)[0m  [1mCREATE TABLE `qualificacoes` (`id` int(11) auto_increment PRIMARY KEY, `nota` float(24), `valor_gasto` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `cliente_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (149.1ms)[0m  CREATE  INDEX `fk_rails_5b62f7ef27` USING btree ON `qualificacoes` (`cliente_id`) 
+  [1m[36m (148.3ms)[0m  [1mCREATE  INDEX `fk_rails_081869fcbc` USING btree ON `qualificacoes` (`restaurante_id`) [0m
+  [1m[35m (62.6ms)[0m  CREATE TABLE `receitas` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `prato_id` int(11), `ingredientes` text, `modo_preparo` text) ENGINE=InnoDB
+  [1m[36m (62.3ms)[0m  [1mCREATE TABLE `restaurantes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `especialidade` varchar(40), `foto_file_name` varchar(255), `foto_content_type` varchar(255), `foto_file_size` int(11), `foto_updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (146.8ms)[0m  ALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_295555769c`
+FOREIGN KEY (`prato_id`)
+  REFERENCES `pratos` (`id`)
+
+  [1m[36m (255.0ms)[0m  [1mALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_7987cd3df4`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (146.5ms)[0m  ALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_5b62f7ef27`
+FOREIGN KEY (`cliente_id`)
+  REFERENCES `clientes` (`id`)
+
+  [1m[36m (163.4ms)[0m  [1mALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_081869fcbc`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (78.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (185.2ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (34.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160306173620')[0m
+  [1m[35m (28.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004212020')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151002040129')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151020145847')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151004212430')[0m
+  [1m[35m (28.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004211136')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003223301')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003221037')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151222145843')[0m
+  [1m[35m (28.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151016160613')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151222151731')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151002040923')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003220255')[0m
+  [1m[35m (28.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160306172320')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151006190727')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003214708')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151006212402')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.0ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = BINARY '    ' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = BINARY 'Rua Sampa' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
