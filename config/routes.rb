@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :restaurantes
   resources :receitas
   resources :pratos
+  resources :especialidades
  
 
  match 'rack',

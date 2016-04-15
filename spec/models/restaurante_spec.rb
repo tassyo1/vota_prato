@@ -13,6 +13,11 @@ RSpec.describe Restaurante, type: :model do
     it { should validate_uniqueness_of(:endereco).case_insensitive }
   end
 
+  describe 'Associações' do
+    it { should have_many(:comentarios) } 
+    it { should have_many(:qualificacoes) }
+  end
+
   describe '#maiuscula' do
     it 'Nome em letras maiúsculas' do
      subject.save!
@@ -23,6 +28,5 @@ RSpec.describe Restaurante, type: :model do
       subject.save!
       expect(subject.endereco).to eql("Rua Pampa N°3") 
     end
-
   end
 end

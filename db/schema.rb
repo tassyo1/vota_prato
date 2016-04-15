@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160306173620) do
+ActiveRecord::Schema.define(version: 20160415222711) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome",       limit: 80
@@ -30,6 +30,20 @@ ActiveRecord::Schema.define(version: 20160306173620) do
 
   add_index "comentarios", ["comentavel_id"], name: "index_comentarios_on_comentavel_id", using: :btree
   add_index "comentarios", ["comentavel_type"], name: "index_comentarios_on_comentavel_type", using: :btree
+
+  create_table "especialidades", force: :cascade do |t|
+    t.string   "nome",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "especialidades_restaurantes", id: false, force: :cascade do |t|
+    t.integer "restaurante_id",   limit: 4, null: false
+    t.integer "especialidade_id", limit: 4, null: false
+  end
+
+  add_index "especialidades_restaurantes", ["especialidade_id", "restaurante_id"], name: "espc_resp", using: :btree
+  add_index "especialidades_restaurantes", ["restaurante_id", "especialidade_id"], name: "rest_espc", using: :btree
 
   create_table "pratos", force: :cascade do |t|
     t.string   "nome",              limit: 80
@@ -82,6 +96,8 @@ ActiveRecord::Schema.define(version: 20160306173620) do
     t.datetime "foto_updated_at"
   end
 
+  add_foreign_key "especialidades_restaurantes", "especialidades"
+  add_foreign_key "especialidades_restaurantes", "restaurantes"
   add_foreign_key "pratos_restaurantes", "pratos"
   add_foreign_key "pratos_restaurantes", "restaurantes"
   add_foreign_key "qualificacoes", "clientes"

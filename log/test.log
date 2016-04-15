@@ -6190,3 +6190,583 @@ FOREIGN KEY (`restaurante_id`)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 07:18:23', '2016-04-15 07:18:23')[0m
   [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (24.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:14:50', '2016-04-15 20:14:50')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (90.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:14:50', '2016-04-15 20:14:50')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (61.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:14:50', '2016-04-15 20:14:50')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (31.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:14:50', '2016-04-15 20:14:50')[0m
+  [1m[35m (0.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (74.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:56:53', '2016-04-15 20:56:53')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (122.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:56:53', '2016-04-15 20:56:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.5ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (34.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:56:53', '2016-04-15 20:56:53')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:56:53', '2016-04-15 20:56:53')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:57:46', '2016-04-15 20:57:46')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (62.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:57:46', '2016-04-15 20:57:46')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (70.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:57:47', '2016-04-15 20:57:47')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (29.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:57:47', '2016-04-15 20:57:47')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:58:11', '2016-04-15 20:58:11')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (29.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:58:11', '2016-04-15 20:58:11')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (29.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:58:11', '2016-04-15 20:58:11')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 20:58:11', '2016-04-15 20:58:11')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:00:19', '2016-04-15 21:00:19')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (50.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:00:19', '2016-04-15 21:00:19')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (29.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:00:19', '2016-04-15 21:00:19')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (30.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:00:19', '2016-04-15 21:00:19')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:01:11', '2016-04-15 21:01:11')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (60.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:01:11', '2016-04-15 21:01:11')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (35.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:01:11', '2016-04-15 21:01:11')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 21:01:11', '2016-04-15 21:01:11')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (306.6ms)[0m  [1mDROP DATABASE IF EXISTS `vota_prato_test`[0m
+  [1m[35m (0.3ms)[0m  CREATE DATABASE `vota_prato_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (86.7ms)[0m  [1mCREATE TABLE `clientes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `idade` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (128.9ms)[0m  CREATE TABLE `comentarios` (`id` int(11) auto_increment PRIMARY KEY, `conteudo` text, `comentavel_id` int(11), `comentavel_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (157.2ms)[0m  [1mCREATE  INDEX `index_comentarios_on_comentavel_id` USING btree ON `comentarios` (`comentavel_id`) [0m
+  [1m[35m (165.4ms)[0m  CREATE  INDEX `index_comentarios_on_comentavel_type` USING btree ON `comentarios` (`comentavel_type`) 
+  [1m[36m (62.1ms)[0m  [1mCREATE TABLE `especialidades` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (63.0ms)[0m  CREATE TABLE `especialidades_restaurantes` (`restaurante_id` int(11) NOT NULL, `especialidade_id` int(11) NOT NULL) ENGINE=InnoDB
+  [1m[36m (165.4ms)[0m  [1mCREATE  INDEX `espc_resp` USING btree ON `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) [0m
+  [1m[35m (165.3ms)[0m  CREATE  INDEX `rest_espc` USING btree ON `especialidades_restaurantes` (`restaurante_id`, `especialidade_id`) 
+  [1m[36m (62.2ms)[0m  [1mCREATE TABLE `pratos` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `foto_file_name` varchar(255), `foto_content_type` varchar(255), `foto_file_size` int(11), `foto_updated_at` datetime, `descricao` varchar(80)) ENGINE=InnoDB[0m
+  [1m[35m (62.6ms)[0m  CREATE TABLE `pratos_restaurantes` (`prato_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB
+  [1m[36m (157.4ms)[0m  [1mCREATE  INDEX `fk_rails_295555769c` USING btree ON `pratos_restaurantes` (`prato_id`) [0m
+  [1m[35m (148.9ms)[0m  CREATE  INDEX `fk_rails_7987cd3df4` USING btree ON `pratos_restaurantes` (`restaurante_id`) 
+  [1m[36m (61.8ms)[0m  [1mCREATE TABLE `qualificacoes` (`id` int(11) auto_increment PRIMARY KEY, `nota` float(24), `valor_gasto` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `cliente_id` int(11), `restaurante_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (165.7ms)[0m  CREATE  INDEX `fk_rails_5b62f7ef27` USING btree ON `qualificacoes` (`cliente_id`) 
+  [1m[36m (173.9ms)[0m  [1mCREATE  INDEX `fk_rails_081869fcbc` USING btree ON `qualificacoes` (`restaurante_id`) [0m
+  [1m[35m (61.9ms)[0m  CREATE TABLE `receitas` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `prato_id` int(11), `ingredientes` text, `modo_preparo` text) ENGINE=InnoDB
+  [1m[36m (62.6ms)[0m  [1mCREATE TABLE `restaurantes` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `especialidade` varchar(40), `foto_file_name` varchar(255), `foto_content_type` varchar(255), `foto_file_size` int(11), `foto_updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (156.5ms)[0m  ALTER TABLE `especialidades_restaurantes` ADD CONSTRAINT `fk_rails_678fa67d45`
+FOREIGN KEY (`especialidade_id`)
+  REFERENCES `especialidades` (`id`)
+
+  [1m[36m (163.3ms)[0m  [1mALTER TABLE `especialidades_restaurantes` ADD CONSTRAINT `fk_rails_a8b0eaeef3`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (155.6ms)[0m  ALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_295555769c`
+FOREIGN KEY (`prato_id`)
+  REFERENCES `pratos` (`id`)
+
+  [1m[36m (146.5ms)[0m  [1mALTER TABLE `pratos_restaurantes` ADD CONSTRAINT `fk_rails_7987cd3df4`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (163.1ms)[0m  ALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_5b62f7ef27`
+FOREIGN KEY (`cliente_id`)
+  REFERENCES `clientes` (`id`)
+
+  [1m[36m (155.0ms)[0m  [1mALTER TABLE `qualificacoes` ADD CONSTRAINT `fk_rails_081869fcbc`
+FOREIGN KEY (`restaurante_id`)
+  REFERENCES `restaurantes` (`id`)
+[0m
+  [1m[35m (59.2ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (176.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (42.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160415222711')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004212020')
+  [1m[36m (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151002040129')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151020145847')
+  [1m[36m (35.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160415213832')[0m
+  [1m[35m (27.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151004212430')
+  [1m[36m (111.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151004211136')[0m
+  [1m[35m (35.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003223301')
+  [1m[36m (55.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003221037')[0m
+  [1m[35m (55.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160306173620')
+  [1m[36m (55.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151222145843')[0m
+  [1m[35m (55.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151016160613')
+  [1m[36m (35.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151222151731')[0m
+  [1m[35m (27.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151002040923')
+  [1m[36m (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160415214629')[0m
+  [1m[35m (27.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151003220255')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160306172320')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151006190727')
+  [1m[36m (28.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151003214708')[0m
+  [1m[35m (27.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151006212402')
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:01', '2016-04-15 22:44:01')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1[0m
+  [1m[35m (29.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:01', '2016-04-15 22:44:01')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1[0m
+  [1m[35m (32.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:01', '2016-04-15 22:44:01')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (31.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:02', '2016-04-15 22:44:02')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (28.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:51', '2016-04-15 22:44:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (33.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:51', '2016-04-15 22:44:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (28.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:51', '2016-04-15 22:44:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (30.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 22:44:51', '2016-04-15 22:44:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:25:41', '2016-04-15 23:25:41')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (30.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:25:41', '2016-04-15 23:25:41')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (29.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:25:41', '2016-04-15 23:25:41')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (28.9ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:25:41', '2016-04-15 23:25:41')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (25.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:26:07', '2016-04-15 23:26:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36m (40.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:26:07', '2016-04-15 23:26:07')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Pampa N°3' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA pAMPA n°3' LIMIT 1
+  [1m[36m (24.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:26:07', '2016-04-15 23:26:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua Pampa n°3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `especialidade`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Pampa N°3', 'Churrasco', '2016-04-15 23:26:07', '2016-04-15 23:26:07')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (24.6ms)[0m  [1mROLLBACK[0m

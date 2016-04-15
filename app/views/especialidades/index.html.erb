@@ -1,0 +1,15 @@
+<h1>Especialidades</h1>
+
+<table class="table table-stripped">
+  <tr>
+    <th>Nome</th>
+  </tr> 
+  <% @especialidades.each do |e| %> 
+    <tr>
+      <td>e.nome</td>
+    </tr>
+  <% end  %>
+</table>
+
+<%= link_to "Novo", new_especialidade_path %>
+
