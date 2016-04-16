@@ -1,0 +1,15 @@
+<%= exibe_erros(@especialidade) %>
+
+<h1>Nova Especialidade</h1>
+
+<%= form_for @especialidade do |f| %>
+  <%= f.label :nome %>
+  <%= f.text_field :nome %>
+  <br>
+  <br>
+    <%= f.submit "Salvar" %>
+<% end %>
+
+<%= link_to "Voltar", especialidades_path %>
+
+
