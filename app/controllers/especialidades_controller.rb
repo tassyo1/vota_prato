@@ -1,12 +1,12 @@
 class EspecialidadesController < ApplicationController
 
   def index
-    @especialidades = Especialidade.all.order(:nome)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render xml: @especialidades }
-    end
+#    @especialidades = Especialidade.all.order(:nome)
+#
+#    respond_to do |format|
+#      format.html # index.html.erb
+#      format.xml  { render xml: @especialidades }
+#    end
   end
 
   def new
@@ -23,8 +23,8 @@ class EspecialidadesController < ApplicationController
 
     respond_to do |format|
       if @especialidade.save
-        flash[:notice] = 'ModelClassName was successfully created.'
-        format.html { redirect_to(@especialidade) }
+        flash[:success] = 'Especialidade criada com sucesso.'
+        format.html { redirect_to action: "index" }
         format.xml  { render xml: @especialidade, status: :created, location: @especialidade }
       else
         format.html { render action: 'new' }
@@ -33,9 +33,20 @@ class EspecialidadesController < ApplicationController
     end
   end
 
+  def destroy
+    @especialidade = Especialidade.find(params[:id])
+    @especialidade.destroy
+
+    respond_to do |format|
+      flash[:success] = 'Especialidade deletada com sucesso.'
+      format.html { redirect_to(especialidades_url) }
+      format.xml  { head :ok }
+    end
+  end
+
   private
   def especialidade_params
-    params.require(:especialidade).permit()
+    params.require(:especialidade).permit(:nome)
   end
   
 end
