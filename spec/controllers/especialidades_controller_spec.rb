@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe EspecialidadesController, type: :controller do
-     describe "GET #index" do
-       it '@especialidades preenchido com Especialidade.all' do
-         expect(@especialidade).to eql(Especialidade.all.order(:nome))
-       end
+  let(:especialidade) { FactoryGirl.create(:especialidade)}
+
+  describe "GET #index" do
+    it 'Atribuir todas as especialidades para @especialidades' do
+      get :index
+      expect(assigns(:especialidades)).to eq([especialidade])
      end
+   end
 end

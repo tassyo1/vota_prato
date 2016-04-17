@@ -6948,3 +6948,243 @@ FOREIGN KEY (`restaurante_id`)
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.1ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.3ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.1ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.1ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:07:37', '2016-04-17 00:07:37')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:07:37', '2016-04-17 00:07:37')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:07:37', '2016-04-17 00:07:37')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.1ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (27.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:09:13', '2016-04-17 00:09:13')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:09:13', '2016-04-17 00:09:13')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:09:13', '2016-04-17 00:09:13')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.1ms)[0m  SELECT `especialidades`.* FROM `especialidades`
+  [1m[36m (33.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:15:34', '2016-04-17 00:15:34')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:15:34', '2016-04-17 00:15:34')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:15:34', '2016-04-17 00:15:34')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (29.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  [1m[36mEspecialidade Load (0.4ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:19:07', '2016-04-17 00:19:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:19:07', '2016-04-17 00:19:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:19:07', '2016-04-17 00:19:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (27.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:23:56', '2016-04-17 00:23:56')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:23:56', '2016-04-17 00:23:56')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:23:56', '2016-04-17 00:23:56')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (37.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:33:47', '2016-04-17 00:33:47')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:33:47', '2016-04-17 00:33:47')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:33:47', '2016-04-17 00:33:47')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (38.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:34:31', '2016-04-17 00:34:31')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:34:31', '2016-04-17 00:34:31')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:34:31', '2016-04-17 00:34:31')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (37.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:37:22', '2016-04-17 00:37:22')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:37:22', '2016-04-17 00:37:22')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:37:22', '2016-04-17 00:37:22')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.4ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (54.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:40:54', '2016-04-17 00:40:54')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:40:54', '2016-04-17 00:40:54')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:40:54', '2016-04-17 00:40:54')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.3ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (31.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:41:28', '2016-04-17 00:41:28')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:41:28', '2016-04-17 00:41:28')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:41:28', '2016-04-17 00:41:28')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.1ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (44.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:43:52', '2016-04-17 00:43:52')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (30.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by EspecialidadesController#index as HTML
+  Rendered especialidades/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Churrasco', '2016-04-17 00:44:34', '2016-04-17 00:44:34')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  [1m[36m (28.6ms)[0m  [1mROLLBACK[0m
