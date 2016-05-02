@@ -58504,3 +58504,707 @@ Processing by RestaurantesController#edit as HTML
   Rendered restaurantes/edit.html.erb within layouts/application (7.6ms)
   Rendered layouts/_menu_principal.html.erb (0.3ms)
 Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-02 16:04:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_menu_principal.html.erb (1.3ms)
+Completed 200 OK in 715ms (Views: 685.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d3f5f685a28d650ee1097d167487cf58b3abec8af26bf3fced167ace226e41a2.css?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/especialidades.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/prato.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/pratos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/receitas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2016-05-02 16:04:23 -0300
+
+
+Started GET "/especialidades" for 127.0.0.1 at 2016-05-02 16:04:39 -0300
+Processing by EspecialidadesController#index as HTML
+  [1m[35mEspecialidade Load (0.5ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  Rendered especialidades/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 81.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:04:41 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.5ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (50.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 123.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurantes/15" for 127.0.0.1 at 2016-05-02 16:04:44 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 15 LIMIT 1[0m
+  [1m[35mEspecialidade Load (0.4ms)[0m  SELECT `especialidades`.* FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36m (0.4ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35mComentario Exists (0.4ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 15 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  Rendered comentarios/_comentarios.html.erb (6.1ms)
+  Rendered comentarios/_novo_comentario.html.erb (72.1ms)
+  Rendered restaurantes/show.html.erb within layouts/application (174.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 253ms (Views: 239.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/fotos/medium/missing.png" for 127.0.0.1 at 2016-05-02 16:04:44 -0300
+
+ActionController::RoutingError (No route matches [GET] "/fotos/medium/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.4ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:04:49 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/especialidades" for 127.0.0.1 at 2016-05-02 16:04:51 -0300
+Processing by EspecialidadesController#index as HTML
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC[0m
+  Rendered especialidades/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2016-05-02 16:04:55 -0300
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.4ms)[0m  SELECT `clientes`.* FROM `clientes`
+  Rendered clientes/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_menu_principal.html.erb (0.9ms)
+Completed 200 OK in 87ms (Views: 80.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/qualificacoes" for 127.0.0.1 at 2016-05-02 16:04:58 -0300
+Processing by QualificacoesController#index as HTML
+  [1m[36mQualificacao Load (0.4ms)[0m  [1mSELECT `qualificacoes`.* FROM `qualificacoes`[0m
+  [1m[35mCliente Load (0.4ms)[0m  SELECT  `clientes`.* FROM `clientes` WHERE `clientes`.`id` = 2 LIMIT 1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 14 LIMIT 1[0m
+  Rendered qualificacoes/index.html.erb within layouts/application (34.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/especialidades" for 127.0.0.1 at 2016-05-02 16:04:59 -0300
+Processing by EspecialidadesController#index as HTML
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  Rendered especialidades/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:05:00 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-02 16:05:06 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:05:06 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurantes/15" for 127.0.0.1 at 2016-05-02 16:05:09 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 15 LIMIT 1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35mComentario Exists (0.2ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 15 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  Rendered comentarios/_comentarios.html.erb (1.0ms)
+  Rendered comentarios/_novo_comentario.html.erb (1.7ms)
+  Rendered restaurantes/show.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fotos/medium/missing.png" for 127.0.0.1 at 2016-05-02 16:05:09 -0300
+
+ActionController::RoutingError (No route matches [GET] "/fotos/medium/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-02 16:05:12 -0300
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/especialidades" for 127.0.0.1 at 2016-05-02 16:10:04 -0300
+Processing by EspecialidadesController#index as HTML
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  Rendered especialidades/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_menu_principal.html.erb (1.2ms)
+Completed 200 OK in 212ms (Views: 187.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/especialidades/3/edit" for 127.0.0.1 at 2016-05-02 16:10:07 -0300
+Processing by EspecialidadesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEspecialidade Load (0.5ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades` WHERE `especialidades`.`id` = 3 LIMIT 1[0m
+  Rendered layouts/_errors.html.erb (3.1ms)
+  Rendered especialidades/_form.html.erb (32.6ms)
+  Rendered especialidades/edit.html.erb within layouts/application (39.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 149ms (Views: 139.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/especialidades" for 127.0.0.1 at 2016-05-02 16:10:09 -0300
+Processing by EspecialidadesController#index as HTML
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`nome` ASC
+  Rendered especialidades/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:10:10 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 84.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurantes/15" for 127.0.0.1 at 2016-05-02 16:10:12 -0300
+Processing by RestaurantesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 15 LIMIT 1[0m
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`nota`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG(`qualificacoes`.`valor_gasto`) FROM `qualificacoes` WHERE `qualificacoes`.`restaurante_id` = 15[0m
+  [1m[35mComentario Exists (0.2ms)[0m  SELECT  1 AS one FROM `comentarios` WHERE `comentarios`.`comentavel_id` = 15 AND `comentarios`.`comentavel_type` = 'Restaurante' LIMIT 1
+  Rendered comentarios/_comentarios.html.erb (4.6ms)
+  Rendered comentarios/_novo_comentario.html.erb (9.0ms)
+  Rendered restaurantes/show.html.erb within layouts/application (77.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 138ms (Views: 133.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fotos/medium/missing.png" for 127.0.0.1 at 2016-05-02 16:10:12 -0300
+
+ActionController::RoutingError (No route matches [GET] "/fotos/medium/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.4ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/tassyosantana/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started GET "/restaurantes/15/edit" for 127.0.0.1 at 2016-05-02 16:10:16 -0300
+Processing by RestaurantesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes` WHERE `restaurantes`.`id` = 15 LIMIT 1[0m
+  Rendered layouts/_errors.html.erb (0.1ms)
+  [1m[35mEspecialidade Load (0.4ms)[0m  SELECT `especialidades`.* FROM `especialidades`
+  [1m[36m (0.4ms)[0m  [1mSELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15  [["restaurante_id", 15]]
+  Rendered restaurantes/_form.html.erb (19.8ms)
+  Rendered restaurantes/edit.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:10:19 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[36mRestaurante Load (0.1ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `restaurantes`
+  Rendered restaurantes/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2016-05-02 16:11:08 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered layouts/_errors.html.erb (0.0ms)
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`[0m
+  Rendered restaurantes/_form.html.erb (4.3ms)
+  Rendered restaurantes/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:11:10 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.4ms)
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT `restaurantes`.* FROM `restaurantes`[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15[0m
+  [1m[35m (0.2ms)[0m  SELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36m (0.2ms)[0m  [1mSELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15[0m
+  [1m[35m (0.2ms)[0m  SELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36m (0.3ms)[0m  [1mSELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15[0m
+  [1m[35m (0.2ms)[0m  SELECT `especialidades`.id FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Load (0.5ms)[0m  SELECT `restaurantes`.* FROM `restaurantes`
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` DESC LIMIT 1[0m
+  [1m[35mEspecialidade Load (0.5ms)[0m  SELECT `especialidades`.* FROM `especialidades` INNER JOIN `especialidades_restaurantes` ON `especialidades`.`id` = `especialidades_restaurantes`.`especialidade_id` WHERE `especialidades_restaurantes`.`restaurante_id` = 15
+  [1m[36mEspecialidade Load (0.4ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`[0m
+  [1m[35mEspecialidade Load (0.4ms)[0m  SELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`restaurante_id`, `especialidade_id`) VALUES (15, 1)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-02 16:51:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu_principal.html.erb (1.4ms)
+Completed 200 OK in 362ms (Views: 355.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d3f5f685a28d650ee1097d167487cf58b3abec8af26bf3fced167ace226e41a2.css?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/assets/clientes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/comentarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/especialidades.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/olamundo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/prato.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/pratos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/qualificacoes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/receitas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/restaurantes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-02 16:51:48 -0300
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:51:50 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_menu_principal.html.erb (0.4ms)
+Completed 200 OK in 101ms (Views: 78.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurantes/new" for 127.0.0.1 at 2016-05-02 16:51:52 -0300
+Processing by RestaurantesController#new as HTML
+  Rendered layouts/_errors.html.erb (3.9ms)
+  [1m[35mEspecialidade Load (0.2ms)[0m  SELECT `especialidades`.* FROM `especialidades`
+  Rendered restaurantes/_form.html.erb (62.4ms)
+  Rendered restaurantes/new.html.erb within layouts/application (64.0ms)
+  Rendered layouts/_menu_principal.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/restaurantes" for 127.0.0.1 at 2016-05-02 16:52:05 -0300
+Processing by RestaurantesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vEdssrXMAFMZ8ZXeClMw4WjUpINHh2ZiQrpV4E0F1iQByfcCkIWDDz+bfs9yufs+wINqs91GUUBZGg1KmPoW+Q==", "restaurante"=>{"nome"=>"Impeachment", "endereco"=>"Rua ddd", "especialidade_ids"=>""}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Impeachment' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua ddd' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered layouts/_errors.html.erb (1.0ms)
+  [1m[36mEspecialidade Load (0.1ms)[0m  [1mSELECT `especialidades`.* FROM `especialidades`[0m
+  Rendered restaurantes/_form.html.erb (5.8ms)
+  Rendered restaurantes/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 63.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurantes" for 127.0.0.1 at 2016-05-02 16:52:15 -0300
+Processing by RestaurantesController#index as HTML
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY nome LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `restaurantes`[0m
+  Rendered restaurantes/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_menu_principal.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveEspecialidadeFromRestaurantes (20160502200322)
+  [1m[35m (36.1ms)[0m  ROLLBACK
+  [1m[35m (67582.4ms)[0m  ALTER TABLE `restaurantes` DROP `especialidade`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160502200322')
+  [1m[36m (30.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'clientes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `clientes`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'comentarios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `comentarios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'especialidades'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `especialidades`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'especialidades_restaurantes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `especialidades_restaurantes`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `pratos`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'pratos_restaurantes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `pratos_restaurantes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'qualificacoes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `qualificacoes`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'receitas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `receitas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'vota_prato_development'
+  AND fk.table_name = 'restaurantes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `restaurantes`

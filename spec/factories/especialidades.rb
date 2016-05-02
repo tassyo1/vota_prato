@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :especialidade do
-    nome 'Churrasco'
+    nome 'churrasco'
   end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Especialidade, type: :model do
-  subject { Especialidade.new(nome:"Churrasco")}
+  subject { FactoryGirl.create :especialidade }
 
   describe "validações" do
     it { should validate_presence_of(:nome) }

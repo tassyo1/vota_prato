@@ -2,7 +2,7 @@ class Restaurante < ActiveRecord::Base
   before_save :maiuscula
   validates :nome, presence: true
   validates :endereco, presence: true
-#  validates :especialidade, presence: true
+  validates :especialidade_ids, presence: true
   validates_uniqueness_of :nome, case_sensitive: false
   validates_uniqueness_of :endereco, case_sensitive: false
 
