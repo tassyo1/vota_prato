@@ -24,6 +24,6 @@ RSpec.describe EspecialidadesController, type: :controller do
 
   describe "POST #create" do
     it 'cria uma especialidade' do
-      
+    end  
   end
 end

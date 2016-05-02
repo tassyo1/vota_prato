@@ -8,7 +8,7 @@
   <% @especialidades.each do |e| %> 
     <tr>
       <td><%= e.nome %></td>
-      <td><%= link_to "Editar", edit_especialidade_path(:id) %></td>
+      <td><%= link_to "Editar", edit_especialidade_path(:id => e) %></td>
       <td><%= link_to "Excluir", especialidade_path(id: e), method: :delete %></td>
     </tr>
   <% end  %>

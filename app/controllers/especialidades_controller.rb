@@ -44,6 +44,25 @@ class EspecialidadesController < ApplicationController
     end
   end
 
+  def edit
+    @especialidade = Especialidade.find(params[:id])
+  end
+
+  def update
+    @especialidade = Especialidade.find(params[:id])
+
+    respond_to do |format|
+      if @especialidade.update(especialidade_params)
+        flash[:success] = 'Especialidade foi alterada.'
+        format.html { redirect_to action: "index" }
+        format.xml  { head :ok }
+      else
+        format.html { render action: 'edit' }
+        format.xml  { render xml: @especialidade.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
   def especialidade_params
     params.require(:especialidade).permit(:nome)
