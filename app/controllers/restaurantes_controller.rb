@@ -3,7 +3,7 @@ class RestaurantesController < ApplicationController
 		#@restaurantes = Restaurante.order :nome
 		#render "index"
 
-		@restaurantes = Restaurante.order("nome").page(params['page']).per(3)
+		@restaurantes = Restaurante.order("nome").page(params['page']).per(10)
 		
 		respond_to do |format|
 			format.html
