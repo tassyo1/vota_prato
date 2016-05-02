@@ -54,6 +54,7 @@ group :development do
   gem 'spring'
 
   gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :production do

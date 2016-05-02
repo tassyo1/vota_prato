@@ -1,9 +1,10 @@
 <%= exibe_erros(@restaurante) %>
 
 <%= form_for @restaurante, html: {multipart: true} do |f| %>
-	Nome: <%= f.text_field :nome %> <br/>
-	Endereço: <%= f.text_field :endereco %> <br/>
-	Especialidade: <%= f.text_field :especialidade %> <br/> 
-	<%= f.file_field :foto %>
-	<%= f.submit "Salvar" %>
+  Nome:<%= f.text_field :nome %> <br/>
+  Endereço: <%= f.text_field :endereco %> <br/>
+  Especialidade:<%= f.collection_select(:especialidade_ids, Especialidade.all.sort,
+                                        :id, :nome,:prompt => true, remote: true)%> <br/>
+  <%= f.file_field :foto %>
+  <%= f.submit "Salvar" %>
 <% end %>

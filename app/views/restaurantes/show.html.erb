@@ -14,9 +14,11 @@
 	<%= @restaurante.endereco %>
 </p>
 <p>
-	<b>Especialidade: </b>
-	<%= @restaurante.especialidade %>
-</p>
+<b>Especialidade: </b>
+<% @restaurante.especialidades.each do |e| %>
+   <%= e.nome %> <br>
+<% end %>
+	</p>
 
 <b> Nota média:</b>
 	<%= @restaurante.qualificacoes.average(:nota) %> <br/>

@@ -14,7 +14,7 @@ class RestaurantesController < ApplicationController
 
 	def show
 		@restaurante = Restaurante.find(params[:id])
-
+ 
 		respond_to do |format|
 			format.html 
 			format.json {render json: @restaurante}
@@ -34,7 +34,8 @@ class RestaurantesController < ApplicationController
 	end
 
 	def restaurante_params
-		params.require(:restaurante).permit(:nome, :endereco, :especialidade, :foto)
+		params.require(:restaurante).permit(:nome, :endereco, :especialidade, :foto,
+                                        :especialidade_ids)
 	end
 
 	def create
