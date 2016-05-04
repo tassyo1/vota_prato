@@ -1,14 +1,10 @@
-<h1> Exibindo Restaurante</h1>
+<h1> <%= @restaurante.nome %></h1>
 
 <p>
-	<b>Foto:</b>
-	<%= image_tag @restaurante.foto.url(:medium) %>
+<% if !@restaurante.foto.blank? %>
+  <%= image_tag @restaurante.foto.url(:medium)  %>
+<% end %>
 </p>
-<p>
-	<b>Nome: </b>
-	<%= @restaurante.nome %>
-</p>
-
 <p>
 	<b>Endereço: </b>
 	<%= @restaurante.endereco %>
@@ -30,5 +26,6 @@
 <%= link_to 'Voltar', action: 'index' %> |
 <%= link_to 'Qualificar este restaurante', controller: "qualificacoes", action: "new", restaurante: @restaurante %>
 
-<%= comentarios @restaurante %>
-<%= novo_comentario @restaurante %>
+<!-- %=# comentarios @restaurante %>
+#%= #novo_comentario @restaurante %> -->
+<%= render "disqus" %>
