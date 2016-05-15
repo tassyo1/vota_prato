@@ -40,7 +40,8 @@ class QualificacoesController < ApplicationController
 
     respond_to do |format|
       if @qualificacao.save
-        format.html { redirect_to @qualificacao, notice: 'Qualificação criada com sucesso.' }
+        flash[:success] = "Qualificação criada com sucesso."
+        format.html { redirect_to @qualificacao }
         format.json { render :show, status: :created, location: @qualificacao }
       else
         preparar_form
@@ -55,7 +56,8 @@ class QualificacoesController < ApplicationController
   def update
     respond_to do |format|
       if @qualificacao.update(qualificacao_params)
-        format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully updated.' }
+        flash[:success] = "Qualificação foi alterada."
+        format.html { redirect_to @qualificacao }
         format.json { render :show, status: :ok, location: @qualificacao }
       else
         preparar_form
@@ -70,7 +72,8 @@ class QualificacoesController < ApplicationController
   def destroy
     @qualificacao.destroy
     respond_to do |format|
-      format.html { redirect_to qualificacoes_url, notice: 'Qualificacao was successfully destroyed.' }
+      flash[:success] = "Qualificação foi deletada."
+      format.html { redirect_to qualificacoes_url }
       format.json { head :no_content }
     end
   end

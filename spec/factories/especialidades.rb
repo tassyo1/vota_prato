@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :especialidade do
-    nome 'churrasco'
-  end
+    nome {Faker::Name.name}
+  end  
 end
