@@ -1,7 +1,7 @@
 class Prato < ActiveRecord::Base
 	validates :descricao, presence: true
   validates :nome, presence: true
-  validates_uniqueness_of :nome,  :message => " - nome já cadastrado"
+  validates_uniqueness_of :nome, case_sensitive: false 
 
 	#has_and_belongs_to_many :restaurantes
 	has_one :receita , autosave: true

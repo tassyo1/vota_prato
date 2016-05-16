@@ -1,4 +1,5 @@
 class Restaurante < ActiveRecord::Base
+  include Capitalization
   before_save :chama_maiuscula
   validates :nome, presence: true
   validates :endereco, presence: true
@@ -23,11 +24,6 @@ class Restaurante < ActiveRecord::Base
 
 
   validates_attachment_content_type :foto, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-
-  # Coloca o nome do restaurante em letra maiúscula. Ex: "bom grill" => "Bom Grill"
-  def maiuscula(variavel) 
-    variavel.downcase.split.map { |e| e.capitalize }.join(" ")
-  end
   
   def chama_maiuscula
     self.nome =maiuscula(self.nome)

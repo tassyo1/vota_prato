@@ -19248,3 +19248,1906 @@ Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.8ms)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (335, 120)[0m
   [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (27.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Devyn Effertz' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Devyn Effertz', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Miss Raquel McKenzie' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Miss Raquel McKenzie', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'kirsten kub' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '430 raynor tunnel' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Miss Raquel McKenzie' AND `especialidades`.`id` != 337) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Kirsten Kub', '430 Raynor Tunnel', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (337, 121)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (55.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 21:35:19' WHERE `especialidades`.`id` = 338
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (80.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Art Bogisich' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Art Bogisich', '2016-05-16 21:35:19', '2016-05-16 21:35:19')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Art Bogisich' AND `especialidades`.`id` != 339) LIMIT 1
+  [1m[36m (30.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Minnie Senger III' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Minnie Senger III', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Minnie Senger III' AND `especialidades`.`id` != 340) LIMIT 1[0m
+  [1m[35m (29.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Rylee Volkman' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Rylee Volkman', '2016-05-16 21:35:19', '2016-05-16 21:35:19')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (29.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Billie O\'Connell' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Billie O\'Connell', '2016-05-16 21:35:19', '2016-05-16 21:35:19')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:35:19', '2016-05-16 21:35:19')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (342, 122)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (29.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Halie Bode' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Halie Bode', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:35:19', '2016-05-16 21:35:19')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (343, 123)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.7ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (30.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Annie Okuneva' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Annie Okuneva', '2016-05-16 21:35:19', '2016-05-16 21:35:19')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (31.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Antoinette Ferry' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Antoinette Ferry', '2016-05-16 21:35:20', '2016-05-16 21:35:20')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (44.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Maryjane Schneider' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Maryjane Schneider', '2016-05-16 21:35:20', '2016-05-16 21:35:20')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (75.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ramon Hartmann' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ramon Hartmann', '2016-05-16 21:35:20', '2016-05-16 21:35:20')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Emmet Yundt' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Emmet Yundt', '2016-05-16 21:35:20', '2016-05-16 21:35:20')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Emmet Yundt' AND `especialidades`.`id` != 348) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:35:20', '2016-05-16 21:35:20')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (348, 124)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (29.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Shanny Bruen' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Shanny Bruen', '2016-05-16 21:35:20', '2016-05-16 21:35:20')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Shanny Bruen' AND `especialidades`.`id` != 349) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:35:20', '2016-05-16 21:35:20')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (349, 125)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (27.9ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ruth Kerluke' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ruth Kerluke', '2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Esta Wisozk' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Esta Wisozk', '2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'kaela hills md' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '66615 abigale cape' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Esta Wisozk' AND `especialidades`.`id` != 351) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Kaela Hills Md', '66615 Abigale Cape', '2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (351, 126)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (55.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.3ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 21:58:07' WHERE `especialidades`.`id` = 352
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (26.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Efrain Lesch' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Efrain Lesch', '2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Dr. Efrain Lesch' AND `especialidades`.`id` != 353) LIMIT 1[0m
+  [1m[35m (31.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Haskell Haag DDS' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Haskell Haag DDS', '2016-05-16 21:58:07', '2016-05-16 21:58:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Haskell Haag DDS' AND `especialidades`.`id` != 354) LIMIT 1
+  [1m[36m (31.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Connie Koelpin' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Connie Koelpin', '2016-05-16 21:58:07', '2016-05-16 21:58:07')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (31.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Chase Adams' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Chase Adams', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (356, 127)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (32.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Audreanne Denesik' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Audreanne Denesik', '2016-05-16 21:58:08', '2016-05-16 21:58:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:58:08', '2016-05-16 21:58:08')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (357, 128)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1
+  [1m[36m (30.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ardith Jones' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ardith Jones', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ed Dach' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ed Dach', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (25.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Freeman Towne' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Freeman Towne', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (31.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Keshawn Yundt' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Keshawn Yundt', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (24.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Miss Ulices Homenick' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Miss Ulices Homenick', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Miss Ulices Homenick' AND `especialidades`.`id` != 362) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:58:08', '2016-05-16 21:58:08')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (362, 129)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (26.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Jonathon Hermiston' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Jonathon Hermiston', '2016-05-16 21:58:08', '2016-05-16 21:58:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Jonathon Hermiston' AND `especialidades`.`id` != 363) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 21:58:08', '2016-05-16 21:58:08')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (363, 130)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (26.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Darian Runolfsdottir' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Darian Runolfsdottir', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ona Lockman' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ona Lockman', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'mrs. arnulfo ferry' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '44215 wunsch forge' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Ona Lockman' AND `especialidades`.`id` != 365) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Mrs. Arnulfo Ferry', '44215 Wunsch Forge', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (365, 131)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (48.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.3ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:33:27' WHERE `especialidades`.`id` = 366
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (29.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Lina Harris I' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Lina Harris I', '2016-05-16 22:33:27', '2016-05-16 22:33:27')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Lina Harris I' AND `especialidades`.`id` != 367) LIMIT 1
+  [1m[36m (28.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Earline Konopelski' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Earline Konopelski', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Earline Konopelski' AND `especialidades`.`id` != 368) LIMIT 1[0m
+  [1m[35m (30.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Lilliana Cronin MD' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Lilliana Cronin MD', '2016-05-16 22:33:27', '2016-05-16 22:33:27')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (29.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Josefa Greenfelder' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Josefa Greenfelder', '2016-05-16 22:33:27', '2016-05-16 22:33:27')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:33:27', '2016-05-16 22:33:27')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (370, 132)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (31.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Korbin Brakus' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Korbin Brakus', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:33:27', '2016-05-16 22:33:27')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (371, 133)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (28.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Else MacGyver' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Else MacGyver', '2016-05-16 22:33:27', '2016-05-16 22:33:27')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (31.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Vida Goldner' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Vida Goldner', '2016-05-16 22:33:28', '2016-05-16 22:33:28')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (28.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Ashleigh Terry' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Ashleigh Terry', '2016-05-16 22:33:28', '2016-05-16 22:33:28')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Freddie Brekke' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Freddie Brekke', '2016-05-16 22:33:28', '2016-05-16 22:33:28')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Zaria Shields' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Zaria Shields', '2016-05-16 22:33:28', '2016-05-16 22:33:28')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Mr. Zaria Shields' AND `especialidades`.`id` != 376) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:33:28', '2016-05-16 22:33:28')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (376, 134)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Reginald Wehner' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Reginald Wehner', '2016-05-16 22:33:28', '2016-05-16 22:33:28')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Reginald Wehner' AND `especialidades`.`id` != 377) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:33:28', '2016-05-16 22:33:28')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (377, 135)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.7ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Sharon Gulgowski' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Sharon Gulgowski', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Joan Quitzon DVM' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Joan Quitzon DVM', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'jovan o\'connell' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '715 eloisa bridge' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Joan Quitzon DVM' AND `especialidades`.`id` != 379) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Jovan O\'connell', '715 Eloisa Bridge', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (379, 136)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (48.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:45:26' WHERE `especialidades`.`id` = 380
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (30.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Angelica McCullough' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Angelica McCullough', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Angelica McCullough' AND `especialidades`.`id` != 381) LIMIT 1
+  [1m[36m (31.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dax Stokes' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dax Stokes', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Dax Stokes' AND `especialidades`.`id` != 382) LIMIT 1[0m
+  [1m[35m (33.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Aditya Koelpin' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Aditya Koelpin', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (30.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Ocie Kihn' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Ocie Kihn', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (384, 137)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (30.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Anissa Douglas' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Anissa Douglas', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (385, 138)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (34.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Selmer Beahan Sr.' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Selmer Beahan Sr.', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (31.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Alena Roberts' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Alena Roberts', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (28.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Ardith Labadie' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Ardith Labadie', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Laurel Weber' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Laurel Weber', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Olin Turner' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Olin Turner', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Olin Turner' AND `especialidades`.`id` != 390) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:45:26', '2016-05-16 22:45:26')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (390, 139)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (35.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Heidi Fadel' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Heidi Fadel', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Heidi Fadel' AND `especialidades`.`id` != 391) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:45:26', '2016-05-16 22:45:26')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (391, 140)
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Isidro Schroeder' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Isidro Schroeder', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Tracey Botsford' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Tracey Botsford', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'talon osinski' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '8227 crist fort' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Ms. Tracey Botsford' AND `especialidades`.`id` != 393) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Talon Osinski', '8227 Crist Fort', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (393, 141)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (67.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.6ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.3ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:46:53' WHERE `especialidades`.`id` = 394
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (31.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Annabelle Bartell Jr.' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Annabelle Bartell Jr.', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Annabelle Bartell Jr.' AND `especialidades`.`id` != 395) LIMIT 1
+  [1m[36m (36.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Maybell Mraz' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Maybell Mraz', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Dr. Maybell Mraz' AND `especialidades`.`id` != 396) LIMIT 1[0m
+  [1m[35m (30.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Liam Doyle' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Liam Doyle', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (29.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Franz Doyle' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Franz Doyle', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (398, 142)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (29.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Marquise Stark' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Marquise Stark', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (399, 143)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (32.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Lura Effertz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Lura Effertz', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (31.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Clark Mills' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Clark Mills', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (29.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Eveline Hartmann' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Eveline Hartmann', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Koby Walker' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Koby Walker', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Sabryna Cole' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Sabryna Cole', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Mrs. Sabryna Cole' AND `especialidades`.`id` != 404) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:46:53', '2016-05-16 22:46:53')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (404, 144)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Neoma Kemmer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Neoma Kemmer', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Neoma Kemmer' AND `especialidades`.`id` != 405) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:46:53', '2016-05-16 22:46:53')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (405, 145)
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (76.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Roma Powlowski' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Roma Powlowski', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Timmy Schaden' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Timmy Schaden', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'dr. antonio herman' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '3659 stokes court' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Timmy Schaden' AND `especialidades`.`id` != 407) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Dr. Antonio Herman', '3659 Stokes Court', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (407, 146)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:48:50' WHERE `especialidades`.`id` = 408
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (29.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.3ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:48:50', '2016-05-16 22:48:50')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:48:50' WHERE `pratos`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35m (48.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Florian Kassulke' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Florian Kassulke', '2016-05-16 22:48:50', '2016-05-16 22:48:50')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Mr. Florian Kassulke' AND `especialidades`.`id` != 409) LIMIT 1
+  [1m[36m (74.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Deontae Schuppe' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Deontae Schuppe', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Deontae Schuppe' AND `especialidades`.`id` != 410) LIMIT 1[0m
+  [1m[35m (29.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Bettie Shields' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Bettie Shields', '2016-05-16 22:48:50', '2016-05-16 22:48:50')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (29.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Everette Kovacek' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Everette Kovacek', '2016-05-16 22:48:50', '2016-05-16 22:48:50')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:48:50', '2016-05-16 22:48:50')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (412, 147)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (28.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Citlalli Wisozk' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Citlalli Wisozk', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:48:50', '2016-05-16 22:48:50')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (413, 148)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.5ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (30.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Brice Weimann' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Brice Weimann', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (30.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Freddie Effertz' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Freddie Effertz', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (28.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Josefa MacGyver' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Josefa MacGyver', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Fritz Klocko' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Fritz Klocko', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Karley Schimmel' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Karley Schimmel', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Karley Schimmel' AND `especialidades`.`id` != 418) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:48:51', '2016-05-16 22:48:51')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (418, 149)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Nestor Ruecker' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Nestor Ruecker', '2016-05-16 22:48:51', '2016-05-16 22:48:51')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Mrs. Nestor Ruecker' AND `especialidades`.`id` != 419) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:48:51', '2016-05-16 22:48:51')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (419, 150)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (33.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Davonte Murazik' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Davonte Murazik', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.1ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Federico Oberbrunner' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Federico Oberbrunner', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'justina schulist' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '7478 johnson mountains' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Federico Oberbrunner' AND `especialidades`.`id` != 421) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Justina Schulist', '7478 Johnson Mountains', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (421, 151)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (45.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:58:00' WHERE `especialidades`.`id` = 422
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (27.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.2ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 22:58:00' WHERE `pratos`.`id` = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35m (30.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Billy Will' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Billy Will', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Billy Will' AND `especialidades`.`id` != 423) LIMIT 1
+  [1m[36m (28.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Keshaun Wilkinson' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Keshaun Wilkinson', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Keshaun Wilkinson' AND `especialidades`.`id` != 424) LIMIT 1[0m
+  [1m[35m (29.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Darlene Tremblay' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Darlene Tremblay', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35m (30.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Astrid White' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Astrid White', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (426, 152)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.5ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (28.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Carlo Gerlach Jr.' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Carlo Gerlach Jr.', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:58:00', '2016-05-16 22:58:00')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (427, 153)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1[0m
+  [1m[35m (30.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Chaz Bahringer PhD' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Chaz Bahringer PhD', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (30.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Donny Cummings' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Donny Cummings', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (27.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Lafayette Turcotte' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Lafayette Turcotte', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (32.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Gardner Price' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Gardner Price', '2016-05-16 22:58:00', '2016-05-16 22:58:00')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Aniya Goodwin' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Aniya Goodwin', '2016-05-16 22:58:01', '2016-05-16 22:58:01')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Aniya Goodwin' AND `especialidades`.`id` != 432) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:58:01', '2016-05-16 22:58:01')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (432, 154)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Keira Lehner' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Keira Lehner', '2016-05-16 22:58:01', '2016-05-16 22:58:01')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Dr. Keira Lehner' AND `especialidades`.`id` != 433) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 22:58:01', '2016-05-16 22:58:01')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (433, 155)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Joshuah Gleason' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Joshuah Gleason', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Abby Breitenberg MD' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Abby Breitenberg MD', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'francis mante' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '4103 hammes dale' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Abby Breitenberg MD' AND `especialidades`.`id` != 435) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Francis Mante', '4103 Hammes Dale', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (435, 156)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (53.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:04:08' WHERE `especialidades`.`id` = 436
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (31.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.3ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:04:08' WHERE `pratos`.`id` = 5[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1
+  [1m[36m (35.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Nolan Senger' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Nolan Senger', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Nolan Senger' AND `especialidades`.`id` != 437) LIMIT 1[0m
+  [1m[35m (30.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Sonya Rath Jr.' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Sonya Rath Jr.', '2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Sonya Rath Jr.' AND `especialidades`.`id` != 438) LIMIT 1
+  [1m[36m (30.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Marie Leffler' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Marie Leffler', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (29.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Desiree Dare' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Desiree Dare', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (440, 157)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (30.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Enid Spinka' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Enid Spinka', '2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.4ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (441, 158)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1
+  [1m[36m (31.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ima Lindgren' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ima Lindgren', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (31.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Timmy Friesen I' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Timmy Friesen I', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Sarai Lehner V' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Sarai Lehner V', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (32.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Wilma Jacobi' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Wilma Jacobi', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Drake Yost' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Drake Yost', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Drake Yost' AND `especialidades`.`id` != 446) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:08', '2016-05-16 23:04:08')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (446, 159)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (35.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Esta Mante' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Esta Mante', '2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Esta Mante' AND `especialidades`.`id` != 447) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:08', '2016-05-16 23:04:08')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (447, 160)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Raoul Steuber' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Raoul Steuber', '2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Antonina Ratke' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Antonina Ratke', '2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'verla rohan' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '79700 ankunding drive' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Antonina Ratke' AND `especialidades`.`id` != 449) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Verla Rohan', '79700 Ankunding Drive', '2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (449, 161)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (30.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.2ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:04:36' WHERE `especialidades`.`id` = 450
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (33.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.2ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:04:36', '2016-05-16 23:04:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:04:36' WHERE `pratos`.`id` = 7[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1
+  [1m[36m (29.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Esmeralda Jacobi' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Esmeralda Jacobi', '2016-05-16 23:04:36', '2016-05-16 23:04:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Dr. Esmeralda Jacobi' AND `especialidades`.`id` != 451) LIMIT 1[0m
+  [1m[35m (28.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Carlotta Haley' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Carlotta Haley', '2016-05-16 23:04:37', '2016-05-16 23:04:37')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Carlotta Haley' AND `especialidades`.`id` != 452) LIMIT 1
+  [1m[36m (30.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Webster Prosacco' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Webster Prosacco', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (30.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Hubert Schmidt' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Hubert Schmidt', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.4ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (454, 162)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (29.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Nikki Carroll' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Nikki Carroll', '2016-05-16 23:04:37', '2016-05-16 23:04:37')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:37', '2016-05-16 23:04:37')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (455, 163)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36m (33.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Shania Little' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Shania Little', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (29.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Johanna Conroy MD' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Johanna Conroy MD', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dora Pfeffer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dora Pfeffer', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (33.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mrs. Cassie Davis' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mrs. Cassie Davis', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Makenzie Runte' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Makenzie Runte', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Makenzie Runte' AND `especialidades`.`id` != 460) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:37', '2016-05-16 23:04:37')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (460, 164)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (34.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Lysanne Miller' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Lysanne Miller', '2016-05-16 23:04:37', '2016-05-16 23:04:37')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Lysanne Miller' AND `especialidades`.`id` != 461) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:04:37', '2016-05-16 23:04:37')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (461, 165)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (34.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Sydnee Willms' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Sydnee Willms', '2016-05-16 23:12:22', '2016-05-16 23:12:22')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.1ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 23:12:22', '2016-05-16 23:12:22')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Alysha Williamson' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Alysha Williamson', '2016-05-16 23:12:22', '2016-05-16 23:12:22')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'miss hortense schinner' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '3922 nestor mills' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Alysha Williamson' AND `especialidades`.`id` != 463) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Miss Hortense Schinner', '3922 Nestor Mills', '2016-05-16 23:12:22', '2016-05-16 23:12:22')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (463, 166)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.9ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:12:23' WHERE `especialidades`.`id` = 464
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (29.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.3ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:12:23' WHERE `pratos`.`id` = 9[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1
+  [1m[36m (30.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Chauncey Kreiger' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Chauncey Kreiger', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Chauncey Kreiger' AND `especialidades`.`id` != 465) LIMIT 1[0m
+  [1m[35m (29.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Erica Lubowitz' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Erica Lubowitz', '2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Erica Lubowitz' AND `especialidades`.`id` != 466) LIMIT 1
+  [1m[36m (29.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Haleigh Rutherford' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Haleigh Rutherford', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (31.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Amos Bode' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Amos Bode', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.3ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (468, 167)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (30.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Dr. Johnson Nitzsche' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Dr. Johnson Nitzsche', '2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.2ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (469, 168)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1
+  [1m[36m (36.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Suzanne Bernhard' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Suzanne Bernhard', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (31.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Gwen Bahringer' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Gwen Bahringer', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ms. Kiera Fay' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ms. Kiera Fay', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (32.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Malinda Schmidt' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Malinda Schmidt', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mallory Monahan' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mallory Monahan', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Mallory Monahan' AND `especialidades`.`id` != 474) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:23', '2016-05-16 23:12:23')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (474, 169)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (27.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Shirley Cronin' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Shirley Cronin', '2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Shirley Cronin' AND `especialidades`.`id` != 475) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:23', '2016-05-16 23:12:23')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (475, 170)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ryann Schoen' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ryann Schoen', '2016-05-16 23:12:50', '2016-05-16 23:12:50')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 23:12:50', '2016-05-16 23:12:50')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Henderson Witting' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Henderson Witting', '2016-05-16 23:12:50', '2016-05-16 23:12:50')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'mr. kaylah sporer' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '7779 raina way' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Henderson Witting' AND `especialidades`.`id` != 477) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Mr. Kaylah Sporer', '7779 Raina Way', '2016-05-16 23:12:50', '2016-05-16 23:12:50')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (477, 171)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (55.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.1ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:12:50', '2016-05-16 23:12:50')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:12:50' WHERE `especialidades`.`id` = 478
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.1ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (25.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.1ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.1ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:12:50', '2016-05-16 23:12:50')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:12:50' WHERE `pratos`.`id` = 11[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35mPrato Exists (0.1ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1
+  [1m[36m (65.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.1ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Miss Kacie Koepp' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Miss Kacie Koepp', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Miss Kacie Koepp' AND `especialidades`.`id` != 479) LIMIT 1[0m
+  [1m[35m (29.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Miss Euna Goodwin' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Miss Euna Goodwin', '2016-05-16 23:12:51', '2016-05-16 23:12:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Miss Euna Goodwin' AND `especialidades`.`id` != 480) LIMIT 1
+  [1m[36m (31.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mr. Ellen Blick' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mr. Ellen Blick', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (27.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Arlene Cormier' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Arlene Cormier', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (482, 172)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (30.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Vicenta Rolfson' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Vicenta Rolfson', '2016-05-16 23:12:51', '2016-05-16 23:12:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:51', '2016-05-16 23:12:51')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (483, 173)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1
+  [1m[36m (27.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Carole Auer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Carole Auer', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (27.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Cecil Upton' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Cecil Upton', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (26.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Selina Funk' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Selina Funk', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (30.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Kellen Roob' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Kellen Roob', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (24.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Nicholas Swaniawski' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Nicholas Swaniawski', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Nicholas Swaniawski' AND `especialidades`.`id` != 488) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:51', '2016-05-16 23:12:51')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (488, 174)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (24.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Stephon Green II' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Stephon Green II', '2016-05-16 23:12:51', '2016-05-16 23:12:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Stephon Green II' AND `especialidades`.`id` != 489) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:12:51', '2016-05-16 23:12:51')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (489, 175)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (31.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Felix Mitchell' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Felix Mitchell', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'feijoada' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `pratos` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('feijoada', 'comida feita com carne de porco', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Bulah Ondricka' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Bulah Ondricka', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.4ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'grover mayert' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = '60584 rita shoal' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Bulah Ondricka' AND `especialidades`.`id` != 491) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Grover Mayert', '60584 Rita Shoal', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (491, 176)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (42.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEspecialidade Load (0.3ms)[0m  [1mSELECT  `especialidades`.* FROM `especialidades`  ORDER BY `especialidades`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `especialidades` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:16:04' WHERE `especialidades`.`id` = 492
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'an arbitrary value' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1[0m
+  [1m[35m (24.9ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Exists (0.3ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrato Load (0.2ms)[0m  SELECT  `pratos`.* FROM `pratos`  ORDER BY `pratos`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `pratos` (`created_at`, `updated_at`) VALUES ('2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `pratos` SET `nome` = 'an arbitrary value', `updated_at` = '2016-05-16 23:16:04' WHERE `pratos`.`id` = 13[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPrato Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'an arbitrary value' LIMIT 1[0m
+  [1m[35mPrato Exists (0.2ms)[0m  SELECT  1 AS one FROM `pratos` WHERE `pratos`.`nome` = 'AN ARBITRARY VALUE' LIMIT 1
+  [1m[36m (26.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Ashlynn Huels' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Ashlynn Huels', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` IS NULL LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Ashlynn Huels' AND `especialidades`.`id` != 493) LIMIT 1[0m
+  [1m[35m (30.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Elinore Schinner' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Elinore Schinner', '2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.5ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` IS NULL LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.2ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Elinore Schinner' AND `especialidades`.`id` != 494) LIMIT 1
+  [1m[36m (28.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Mable Schamberger' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Mable Schamberger', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.1ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36m (31.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Marley Mann' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Marley Mann', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Load (0.2ms)[0m  [1mSELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (496, 177)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'eSPETO cARIOCA' LIMIT 1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1[0m
+  [1m[35m (31.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Kelli Abernathy' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Kelli Abernathy', '2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Load (0.3ms)[0m  SELECT  `restaurantes`.* FROM `restaurantes`  ORDER BY `restaurantes`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (497, 178)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'Rua Silva' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'Espeto Carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rUA sILVA' LIMIT 1
+  [1m[36m (25.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Rocky Stokes DDS' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Rocky Stokes DDS', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (29.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Miss Bobby Vandervort' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Miss Bobby Vandervort', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (25.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.4ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Eden Wehner' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Eden Wehner', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (25.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.5ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Turner Trantow' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Turner Trantow', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (25.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Buster Hegmann' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Buster Hegmann', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRestaurante Exists (0.3ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1
+  [1m[36mRestaurante Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1[0m
+  [1m[35mEspecialidade Exists (0.3ms)[0m  SELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Buster Hegmann' AND `especialidades`.`id` != 502) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:16:04', '2016-05-16 23:16:04')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (502, 179)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (25.9ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEspecialidade Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE `especialidades`.`nome` = 'Donavon Brakus' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `especialidades` (`nome`, `created_at`, `updated_at`) VALUES ('Donavon Brakus', '2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mRestaurante Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`nome` = 'espeto carioca' LIMIT 1[0m
+  [1m[35mRestaurante Exists (0.2ms)[0m  SELECT  1 AS one FROM `restaurantes` WHERE `restaurantes`.`endereco` = 'rua silva' LIMIT 1
+  [1m[36mEspecialidade Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `especialidades` WHERE (`especialidades`.`nome` = 'Donavon Brakus' AND `especialidades`.`id` != 503) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `restaurantes` (`nome`, `endereco`, `created_at`, `updated_at`) VALUES ('Espeto Carioca', 'Rua Silva', '2016-05-16 23:16:04', '2016-05-16 23:16:04')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `especialidades_restaurantes` (`especialidade_id`, `restaurante_id`) VALUES (503, 180)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (28.0ms)[0m  [1mROLLBACK[0m
