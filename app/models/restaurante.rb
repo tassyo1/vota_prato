@@ -1,8 +1,8 @@
 class Restaurante < ActiveRecord::Base
-  before_save :maiuscula
+  before_save :chama_maiuscula
   validates :nome, presence: true
   validates :endereco, presence: true
-  validates :especialidade_ids, presence: true
+  validates :especialidades, presence: true
   validates_uniqueness_of :nome, case_sensitive: false
   validates_uniqueness_of :endereco, case_sensitive: false
 
@@ -25,9 +25,13 @@ class Restaurante < ActiveRecord::Base
   validates_attachment_content_type :foto, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   # Coloca o nome do restaurante em letra maiúscula. Ex: "bom grill" => "Bom Grill"
-  def maiuscula
-    self.nome = self.nome.downcase.split.map { |n| n.capitalize }.join(" ")
-    self.endereco = self.endereco.downcase.split.map { |e| e.capitalize }.join(" ")
+  def maiuscula(variavel) 
+    variavel.downcase.split.map { |e| e.capitalize }.join(" ")
+  end
+  
+  def chama_maiuscula
+    self.nome =maiuscula(self.nome)
+    self.endereco =maiuscula(self.endereco)
   end
 
 end

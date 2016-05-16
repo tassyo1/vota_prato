@@ -1,36 +1,42 @@
 require 'rails_helper'
 
 RSpec.describe Restaurante, type: :model do
-
-  let(:esp) { FactoryGirl.create :especialidade }  
-  let(:lista_especialidades) { [esp.id]  }
-  subject { Restaurante.new(nome: "espeto carioca",
-                            endereco: "rua Pampa n°3", especialidade_ids: lista_especialidades)
-}
+  
+  subject do 
+    Restaurante.new(nome: "espeto carioca",
+                    endereco:"rua silva",
+                    especialidades: [create(:especialidade)] )
+  end
   
   describe 'validações' do  
-    it { should validate_presence_of(:nome) }    
-    it { should validate_presence_of(:endereco) }    
-    it { should validate_presence_of(:especialidade_ids) }    
-    it { should validate_uniqueness_of(:nome).case_insensitive}
-    it { should validate_uniqueness_of(:endereco).case_insensitive }
+    it { is_expected.to validate_presence_of(:nome) }    
+    it { is_expected.to validate_presence_of(:endereco) }    
+    it { is_expected.to validate_presence_of(:especialidades) }    
+    it { is_expected.to validate_uniqueness_of(:nome).case_insensitive}
+    it { is_expected.to validate_uniqueness_of(:endereco).case_insensitive }
   end
 
-  describe 'Associações' do
-    it { should have_many(:comentarios) } 
-    it { should have_many(:qualificacoes) }
-    it { should have_and_belong_to_many(:especialidades)}
+  describe 'associações' do
+    it { is_expected.to have_many(:comentarios) } 
+    it { is_expected.to have_many(:qualificacoes) }
+    it { is_expected.to have_and_belong_to_many(:especialidades)}
   end
 
   describe '#maiuscula' do
-    it 'Nome em letras maiúsculas' do
-     subject.save!
-     expect(subject.nome).to eql("Espeto Carioca")
+    it 'retorna campo capitalizado' do
+      nome_down = subject.nome
+      expect(subject.maiuscula(nome_down)).to eq("Espeto Carioca") 
     end
+  end
 
-    it 'Endereço em letras maiúsculas' do
+  describe "#chama_maiuscula" do
+    it 'capitaliza nome antes de salvar' do
       subject.save!
-      expect(subject.endereco).to eql("Rua Pampa N°3") 
+      expect(subject.nome).to eq("Espeto Carioca")
+    end
+    it 'capitaliza endereco antes de salvar' do
+      subject.save!
+      expect(subject.endereco).to eq("Rua Silva")
     end
   end
 end
