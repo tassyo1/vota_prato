@@ -1,17 +1,15 @@
-  require 'rails_helper'
+require 'rails_helper'
 
   RSpec.describe EspecialidadesController, type: :controller do
-    #let(:esp) { FactoryGirl.create(:especialidade)}
-      
-    describe "GET #index" do
-     let(:esp) { create(:especialidade)}
+    subject(:especialidade_nova) { create(:especialidade) }     
 
+    describe "GET #index" do
       before :each do
        get :index 
       end
 
       it 'atribuir todas as especialidades para @especialidades' do
-        expect(assigns(:especialidades)).to eq([esp])
+        expect(assigns(:especialidades)).to eq([especialidade_nova])
       end
       
       it 'redirecionar para index.html.erb' do
@@ -50,5 +48,46 @@
           expect(response).to render_template :new
         end
       end
-  end
+    end
+
+    describe "DELETE #destroy" do
+      it 'deleta a especialidade' do
+        delete :destroy, id: especialidade_nova
+        expect(Especialidade.count(0)).to eq(0)
+      end 
+    end
+
+    describe "PATCH #update" do
+      context 'com atributos válidos' do
+        it 'localiza a @especialidade' do
+          patch :update, id: especialidade_nova,
+            especialidade: attributes_for(:especialidade)
+          expect(assigns(:especialidade)).to eq especialidade_nova
+         end
+
+        it 'muda os atributos de @especialidade' do
+          patch :update, id: especialidade_nova,
+            especialidade: attributes_for(:especialidade,nome:"francesa")
+          especialidade_nova.reload
+          expect(especialidade_nova.nome).to eq("francesa")
+        end
+   
+        it 'redireciona para rota especialidades_url(#index)' do
+          patch :update, id: especialidade_nova,
+            especialidade: attributes_for(:especialidade)
+          expect(response).to redirect_to especialidades_url
+        end 
+      end
+
+      context 'com atributos inválidos' do
+        it 'redireciona para action #edit' do
+          patch :update, id: especialidade_nova,
+            especialidade: attributes_for(:especialidade, nome:nil)
+          expect(response).to render_template :edit
+        end
+      end
+      
+    end
+
+
 end
