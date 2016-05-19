@@ -35,12 +35,19 @@ class EspecialidadesController < ApplicationController
 
   def destroy
     @especialidade = Especialidade.find(params[:id])
-    @especialidade.destroy
 
     respond_to do |format|
-      flash[:success] = 'Especialidade deletada com sucesso.'
-      format.html { redirect_to(especialidades_url) }
-      format.xml  { head :ok }
+      if @especialidade.restaurantes.first.blank?
+        @especialidade.destroy
+        flash[:success] = 'Especialidade deletada com sucesso.'
+        format.html { redirect_to(especialidades_url) }
+        format.xml  { head :ok }
+      else
+        flash[:danger] = "Especialidade \"#{@especialidade.nome}\" não pode ser deletada,
+        pois está vinculada a um restaurante"
+        format.html { redirect_to(especialidades_url) }
+        format.xml  { render xml: @especialidade.errors, status: :unprocessable_entity }
+      end
     end
   end
 
